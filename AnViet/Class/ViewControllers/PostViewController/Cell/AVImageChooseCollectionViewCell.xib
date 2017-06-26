@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="AVImageChooseCollectionViewCell" customModule="AnViet" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MHh-Cv-QCF">
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xuU-MX-9bD"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FVa-YQ-Rjn">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="LLt-Ei-e3H"/>
+                                    <constraint firstAttribute="height" constant="20" id="py7-uD-M30"/>
+                                </constraints>
+                                <state key="normal" image="delete"/>
+                                <connections>
+                                    <action selector="didSelectDeleteImage:" destination="gTV-IL-0wX" eventType="touchUpInside" id="oJo-rz-lXA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xuU-MX-9bD" firstAttribute="leading" secondItem="MHh-Cv-QCF" secondAttribute="leading" constant="10" id="88d-VL-W9n"/>
+                            <constraint firstItem="xuU-MX-9bD" firstAttribute="top" secondItem="MHh-Cv-QCF" secondAttribute="top" constant="10" id="KyX-tg-8HN"/>
+                            <constraint firstItem="FVa-YQ-Rjn" firstAttribute="top" secondItem="MHh-Cv-QCF" secondAttribute="top" constant="3" id="Pa3-7p-lWG"/>
+                            <constraint firstAttribute="trailing" secondItem="FVa-YQ-Rjn" secondAttribute="trailing" constant="3" id="awS-O6-j4l"/>
+                            <constraint firstAttribute="bottom" secondItem="xuU-MX-9bD" secondAttribute="bottom" constant="10" id="e2t-cU-tAQ"/>
+                            <constraint firstAttribute="trailing" secondItem="xuU-MX-9bD" secondAttribute="trailing" constant="10" id="l0Q-bY-qfw"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="MHh-Cv-QCF" secondAttribute="trailing" id="Hre-eH-aDe"/>
+                <constraint firstItem="MHh-Cv-QCF" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Jqy-wl-Fzh"/>
+                <constraint firstAttribute="bottom" secondItem="MHh-Cv-QCF" secondAttribute="bottom" id="Oxx-YW-Er9"/>
+                <constraint firstItem="MHh-Cv-QCF" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="d93-km-rcL"/>
+            </constraints>
+            <connections>
+                <outlet property="btnDeleteImage" destination="FVa-YQ-Rjn" id="Tlx-KV-Twy"/>
+                <outlet property="imgImageView" destination="xuU-MX-9bD" id="2aO-kd-8vz"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="delete" width="35" height="35"/>
+    </resources>
+</document>

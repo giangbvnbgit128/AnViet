@@ -24,6 +24,7 @@ class AVRegisterAccountAccountViewController: AVBaseViewController {
     @IBOutlet weak var tfPassWord: UITextField!
     @IBOutlet weak var imgErrorPass: UIImageView!
     
+    @IBOutlet weak var btnRegis: UIButton!
     @IBOutlet weak var tfAgaintPass: UITextField!
     @IBOutlet weak var imagErrorPassAgaint: UIImageView!
     
@@ -63,7 +64,8 @@ class AVRegisterAccountAccountViewController: AVBaseViewController {
         self.imgErrorNumberPhone.isHidden = true
         self.imgErrorModel.isHidden = true
         // Do any additional setup after loading the view.
-
+        
+        btnRegis.layer.cornerRadius = 4
         
         
     }
@@ -154,7 +156,6 @@ class AVRegisterAccountAccountViewController: AVBaseViewController {
                     self.showAler(message: self.userInfor.mess, title: "")
                 }
             case .failure(_):
-                print("AAAAA")
                 break
             }
         }
@@ -163,8 +164,7 @@ class AVRegisterAccountAccountViewController: AVBaseViewController {
 
 extension AVRegisterAccountAccountViewController: UITextFieldDelegate {
 
-    public func textFieldDidBeginEditing(_ textField: UITextField) {
-        print("textFieldDidBeginEditing")
+    public func textFieldDidBeginEditing(_ textField: UITextField) {    
     }
     
     public func textFieldDidEndEditing(_ textField: UITextField) {

@@ -1,8 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,6 +25,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" delaysContentTouches="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="4xX-6D-tHt">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZDn-AK-tDt">
                         <size key="itemSize" width="50" height="50"/>
@@ -31,15 +35,19 @@
                     </collectionViewFlowLayout>
                 </collectionView>
                 <pageControl opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="7" translatesAutoresizingMaskIntoConstraints="NO" id="rfx-eU-fQV">
+                    <rect key="frame" x="136" y="570" width="103" height="37"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <color key="pageIndicatorTintColor" red="0.64705882349999999" green="0.0" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="currentPageIndicatorTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </pageControl>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZMz-qv-U2x">
+                    <rect key="frame" x="0.0" y="607" width="375" height="50"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cYi-eA-nWe" userLabel="Login">
+                            <rect key="frame" x="187.5" y="0.0" width="187.5" height="50"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4l6-Pv-Fxe">
+                                    <rect key="frame" x="5" y="0.0" width="162.5" height="50"/>
                                     <color key="backgroundColor" red="0.6470588235294118" green="0.0" blue="0.078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
                                     <state key="normal" title="Đăng Nhập">
@@ -59,8 +67,10 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dG7-CC-wCB" userLabel="regis">
+                            <rect key="frame" x="0.0" y="0.0" width="187.5" height="50"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lzi-9j-IdX">
+                                    <rect key="frame" x="20" y="0.0" width="162.5" height="50"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                     <state key="normal" title="Đăng Ký">
@@ -101,6 +111,7 @@
                 <constraint firstAttribute="bottom" secondItem="4xX-6D-tHt" secondAttribute="bottom" id="G50-dj-zTR"/>
                 <constraint firstItem="ZMz-qv-U2x" firstAttribute="top" secondItem="rfx-eU-fQV" secondAttribute="bottom" id="gV2-Lm-cSO"/>
                 <constraint firstAttribute="trailing" secondItem="ZMz-qv-U2x" secondAttribute="trailing" id="hGx-ri-wEs"/>
+                <constraint firstItem="ZMz-qv-U2x" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="1.5/20" id="lHb-Ae-lYw"/>
                 <constraint firstItem="4xX-6D-tHt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="xnt-ul-KVD"/>
                 <constraint firstAttribute="trailing" secondItem="4xX-6D-tHt" secondAttribute="trailing" id="yA5-NC-jP8"/>
                 <constraint firstAttribute="bottom" secondItem="ZMz-qv-U2x" secondAttribute="bottom" constant="10" id="zJD-En-c8n"/>

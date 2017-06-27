@@ -14,6 +14,7 @@ class AVLoginViewController: UIViewController {
 
     @IBOutlet weak var txtPassWord: UITextField!
     @IBOutlet weak var txtUserName: UITextField!
+    @IBOutlet weak var btnLogin: UIButton!
     
     var userInfor:UserInfor = UserInfor()
     
@@ -22,6 +23,7 @@ class AVLoginViewController: UIViewController {
         self.navigationItem.title = "Đăng Nhập"
         self.navigationController?.isNavigationBarHidden = false
         
+        self.btnLogin.layer.cornerRadius = 4
 
         
         txtPassWord.text = "0988225850"

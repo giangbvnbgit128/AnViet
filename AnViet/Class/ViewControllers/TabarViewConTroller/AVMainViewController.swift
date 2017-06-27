@@ -17,7 +17,7 @@ class AVMainViewController: UIViewController, UITabBarDelegate, CAPSPageMenuDele
     @IBOutlet weak var newsItem: UITabBarItem!
     @IBOutlet weak var ServiceItem: UITabBarItem!
     @IBOutlet weak var personalItem: UITabBarItem!
-    
+    var blockReloadData:(()->Void)?
     struct Static {
         static var instance: AVMainViewController?
     }
@@ -41,6 +41,10 @@ class AVMainViewController: UIViewController, UITabBarDelegate, CAPSPageMenuDele
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
          self.navigationController?.isNavigationBarHidden = true
+        
+        if let block = blockReloadData {
+            block()
+        }
     }
 
     override func didReceiveMemoryWarning() {

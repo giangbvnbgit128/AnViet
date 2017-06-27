@@ -92,7 +92,6 @@ class PostViewController: AVBaseViewController {
                     self.countImageLoadFinish += 1
                     if self.countImageLoadFinish == arrayImageData.count {
                         let strImage:String = self.formatJsonForUpload(arrayImage: self.arrayImageJSON)
-                        print(" ===== ket qua = \(strImage)")
                         let content = self.txtContent.text ?? ""
                         
                         self.postNews(image: strImage, content: content, complete: {
@@ -120,7 +119,7 @@ class PostViewController: AVBaseViewController {
                 let newValue = value as? [String : AnyObject]
                 let newsPost:NewsUpload = Mapper<NewsUpload>().map(JSONObject: newValue)!
                 if newsPost.error.compare("FALSE") == .orderedSame {
-                    self.navigationController?.popoverPresentationController
+                     self.navigationController?.popViewController(animated: true)
                 } else {
                     self.showAler(message: newsPost.message, title: "Error")
                 }

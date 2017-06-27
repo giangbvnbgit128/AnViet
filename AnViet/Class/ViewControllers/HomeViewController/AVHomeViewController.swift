@@ -24,23 +24,24 @@ class AVHomeViewController: AVBaseViewController {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
         setUpTable()
-        if self.navigationController == nil {
-            print("nillll")
-        } else {
-            print("nonnoooooooni")
+        AVMainViewController.ShareInstance.blockReloadData = {() in
+            self.getData()
         }
     }
 
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.getData()
+    }
+    
+    func getData() {
         let value:NSObject =  UserDefaults[.userInfor] as! NSObject
         let newValue = value as? [String : AnyObject]
         user = Mapper<UserInfor>().map(JSONObject: newValue)!
-        
         self.getNewsFeed(userid: user.data.id, token: user.data.token, limit: "10", postid: "0",isloadMore: false)
-        
     }
+    
     func setUpTable() {
         
         self.tableView.delegate = self

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3B12AF491C3FDCF978078B0F /* Pods_AnViet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16B814725BC122385BE95332 /* Pods_AnViet.framework */; };
+		4B3FA9651F03AE6F004D0ED9 /* UserInforViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3FA9631F03AE6F004D0ED9 /* UserInforViewController.swift */; };
+		4B3FA9661F03AE6F004D0ED9 /* UserInforViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B3FA9641F03AE6F004D0ED9 /* UserInforViewController.xib */; };
+		4B3FA9681F03B49E004D0ED9 /* AVUserInforSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3FA9671F03B49E004D0ED9 /* AVUserInforSetting.swift */; };
 		5306F9EC1EECDD60000C9EEF /* AVNewsPostRoutuer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5306F9EB1EECDD60000C9EEF /* AVNewsPostRoutuer.swift */; };
 		5312612A1EE9D5170014D87B /* AVNewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531261281EE9D5170014D87B /* AVNewsTableViewCell.swift */; };
 		5312612B1EE9D5170014D87B /* AVNewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 531261291EE9D5170014D87B /* AVNewsTableViewCell.xib */; };
@@ -152,6 +155,9 @@
 /* Begin PBXFileReference section */
 		16B814725BC122385BE95332 /* Pods_AnViet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnViet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		471C07F537CFB02D724894B7 /* Pods-AnViet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnViet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnViet/Pods-AnViet.debug.xcconfig"; sourceTree = "<group>"; };
+		4B3FA9631F03AE6F004D0ED9 /* UserInforViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInforViewController.swift; sourceTree = "<group>"; };
+		4B3FA9641F03AE6F004D0ED9 /* UserInforViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserInforViewController.xib; sourceTree = "<group>"; };
+		4B3FA9671F03B49E004D0ED9 /* AVUserInforSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVUserInforSetting.swift; sourceTree = "<group>"; };
 		5306F9EB1EECDD60000C9EEF /* AVNewsPostRoutuer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVNewsPostRoutuer.swift; sourceTree = "<group>"; };
 		531261281EE9D5170014D87B /* AVNewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVNewsTableViewCell.swift; sourceTree = "<group>"; };
 		531261291EE9D5170014D87B /* AVNewsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AVNewsTableViewCell.xib; sourceTree = "<group>"; };
@@ -323,6 +329,63 @@
 				16B814725BC122385BE95332 /* Pods_AnViet.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4B3FA95C1F03AD35004D0ED9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4B3FA95D1F03AE02004D0ED9 /* ConfigComputerViewController */,
+				4B3FA95E1F03AE02004D0ED9 /* InforComputerViewController */,
+				4B3FA95F1F03AE02004D0ED9 /* MainSettingViewController */,
+				4B3FA9601F03AE02004D0ED9 /* ThumbnailViewController */,
+				4B3FA9611F03AE02004D0ED9 /* TimeLineViewController */,
+				4B3FA9621F03AE02004D0ED9 /* UserInforViewController */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4B3FA95D1F03AE02004D0ED9 /* ConfigComputerViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ConfigComputerViewController;
+			sourceTree = "<group>";
+		};
+		4B3FA95E1F03AE02004D0ED9 /* InforComputerViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = InforComputerViewController;
+			sourceTree = "<group>";
+		};
+		4B3FA95F1F03AE02004D0ED9 /* MainSettingViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MainSettingViewController;
+			sourceTree = "<group>";
+		};
+		4B3FA9601F03AE02004D0ED9 /* ThumbnailViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ThumbnailViewController;
+			sourceTree = "<group>";
+		};
+		4B3FA9611F03AE02004D0ED9 /* TimeLineViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TimeLineViewController;
+			sourceTree = "<group>";
+		};
+		4B3FA9621F03AE02004D0ED9 /* UserInforViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4B3FA9631F03AE6F004D0ED9 /* UserInforViewController.swift */,
+				4B3FA9641F03AE6F004D0ED9 /* UserInforViewController.xib */,
+			);
+			path = UserInforViewController;
 			sourceTree = "<group>";
 		};
 		531261271EE9D4FA0014D87B /* Cell */ = {
@@ -583,6 +646,7 @@
 		53661B961EDA639100BD01E4 /* PersonalViewController */ = {
 			isa = PBXGroup;
 			children = (
+				4B3FA95C1F03AD35004D0ED9 /* View */,
 				531261351EE9E61C0014D87B /* Cell */,
 				53661BA01EDA63E400BD01E4 /* AVPersonalViewController.swift */,
 				53661BA11EDA63E400BD01E4 /* AVPersonalViewController.xib */,
@@ -666,6 +730,7 @@
 				53EE141F1EE5DABA0089C2B1 /* AVNewsFeedRouter.swift */,
 				5306F9EB1EECDD60000C9EEF /* AVNewsPostRoutuer.swift */,
 				536C055F1EF8477D0010AF77 /* AVUploadRouter.swift */,
+				4B3FA9671F03B49E004D0ED9 /* AVUserInforSetting.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -803,6 +868,7 @@
 				TargetAttributes = {
 					535BE7AF1ED5F92200363A7B = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = ANWG4T534G;
 						ProvisioningStyle = Manual;
 					};
 					535BE7C31ED5F92200363A7B = {
@@ -860,6 +926,7 @@
 				53661BA31EDA63E400BD01E4 /* AVPersonalViewController.xib in Resources */,
 				53661B9F1EDA63CF00BD01E4 /* AVNewsViewController.xib in Resources */,
 				536EE2E01ED727C100954E60 /* AVLoginViewController.xib in Resources */,
+				4B3FA9661F03AE6F004D0ED9 /* UserInforViewController.xib in Resources */,
 				535BE7BB1ED5F92200363A7B /* Assets.xcassets in Resources */,
 				533749CE1EDABF9B00312AA5 /* AVMainViewController.xib in Resources */,
 				53BA65121EDDC2670027A463 /* AVNewFeedOneImageTableViewCell.xib in Resources */,
@@ -987,10 +1054,12 @@
 				533749DE1EDAC59D00312AA5 /* MenuItemView.swift in Sources */,
 				53EE14201EE5DABA0089C2B1 /* AVNewsFeedRouter.swift in Sources */,
 				53F328D11EE874D500310B06 /* Defines.swift in Sources */,
+				4B3FA9681F03B49E004D0ED9 /* AVUserInforSetting.swift in Sources */,
 				53BA652F1EDDCB020027A463 /* AVNewFeedFourImageTableViewCell.swift in Sources */,
 				53BA65111EDDC2670027A463 /* AVNewFeedOneImageTableViewCell.swift in Sources */,
 				53BA651B1EDDC8B20027A463 /* AVNewFeedTwoImageTableViewCell.swift in Sources */,
 				533749DC1EDAC59D00312AA5 /* CAPSPageMenu.swift in Sources */,
+				4B3FA9651F03AE6F004D0ED9 /* UserInforViewController.swift in Sources */,
 				53B20A411ED6011900332200 /* UITabBarController.swift in Sources */,
 				53EE14221EE5DD360089C2B1 /* NewsItem.swift in Sources */,
 				53C10E6D1EDDFE2800C24B7C /* UserInfor.swift in Sources */,
@@ -1170,7 +1239,8 @@
 			baseConfigurationReference = 471C07F537CFB02D724894B7 /* Pods-AnViet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = ANWG4T534G;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/MD5",
@@ -1179,9 +1249,12 @@
 					"$(PROJECT_DIR)/build/Release-iphoneos/DKImagePickerController",
 				);
 				INFOPLIST_FILE = AnViet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = giang.AnViet.com;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vietis.koshien;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a52847e5-1895-4b0e-a419-dc7fe36bca20";
+				PROVISIONING_PROFILE_SPECIFIER = VietIS_KoshienPro_Dev;
 				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/AnViet-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
@@ -1192,6 +1265,7 @@
 			baseConfigurationReference = D2531E2A7C3856B27A9B33F5 /* Pods-AnViet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1201,8 +1275,9 @@
 					"$(PROJECT_DIR)/build/Release-iphoneos/DKImagePickerController",
 				);
 				INFOPLIST_FILE = AnViet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = giang.AnViet.com;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vietis.koshien;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/AnViet-Bridging-Header.h";

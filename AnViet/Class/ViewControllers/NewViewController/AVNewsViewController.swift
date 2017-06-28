@@ -33,9 +33,9 @@ extension AVNewsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {
-            return (UIScreen.mainHeight/10) * 3
+            return (UIScreen.mainHeight/10) * 4
         } else {
-            return 60 * Ratio.widthIPhone6
+            return 103 * Ratio.widthIPhone6
         }
 
     }

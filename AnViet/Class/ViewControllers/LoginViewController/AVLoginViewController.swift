@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import ObjectMapper
 
-class AVLoginViewController: UIViewController {
+class AVLoginViewController: AVBaseViewController {
 
     @IBOutlet weak var txtPassWord: UITextField!
     @IBOutlet weak var txtUserName: UITextField!
@@ -62,7 +62,7 @@ class AVLoginViewController: UIViewController {
 //MARK: CallAPi Login
     
     func requsetLogin(userName:String,passWord:String) {
-//        self.showLoading()
+        self.showLoading()
         Alamofire.request(AVLoginRouter( endpoint: .login(userName: userName, password: passWord))).responseJSON { (response) in
 //            self.stopLoading()
             switch response.result {
@@ -77,7 +77,7 @@ class AVLoginViewController: UIViewController {
                     appDelegate.window?.makeKeyAndVisible()
                 } else {
                   let nameApplication = Bundle.main.infoDictionary![kCFBundleNameKey as String] as! String
-//                    self.showAler(message: self.userInfor.mess, title: nameApplication)
+                    self.showAler(message: self.userInfor.mess, title: nameApplication)
                 }
             case .failure(_):
                 print("AAAAA")

@@ -1,57 +1,34 @@
 //
-//  AVMainViewController.swift
+//  MainSettingViewController.swift
 //  AnViet
 //
-//  Created by Bui Giang on 5/28/17.
+//  Created by Bui Giang on 6/28/17.
 //  Copyright © 2017 Bui Giang. All rights reserved.
 //
 
 import UIKit
 
-class AVMainViewController: UIViewController, UITabBarDelegate, CAPSPageMenuDelegate {
+class MainSettingViewController: AVBaseViewController , UITabBarDelegate, CAPSPageMenuDelegate{
+
     @IBOutlet weak var tabBarView: UITabBar!
-    var pageMenu: CAPSPageMenu?
-    @IBOutlet weak var homeItem: UITabBarItem!
+     var pageMenu: CAPSPageMenu?
     
-    @IBOutlet weak var nsContraintHeightTabbar: NSLayoutConstraint!
-    @IBOutlet weak var newsItem: UITabBarItem!
-    @IBOutlet weak var ServiceItem: UITabBarItem!
-    @IBOutlet weak var personalItem: UITabBarItem!
-    var blockReloadData:(()->Void)?
-    struct Static {
-        static var instance: AVMainViewController?
-    }
-    class var ShareInstance: AVMainViewController {
-        if Static.instance == nil {
-            Static.instance = AVMainViewController()
-        }
-        return Static.instance!
-    }
-    
+    @IBOutlet weak var journalItem: UITabBar!
+    @IBOutlet weak var configureItem: UITabBarItem!
+    @IBOutlet weak var historyImage: UITabBarItem!
+    @IBOutlet weak var inforItem: UITabBarItem!
     override func viewDidLoad() {
         super.viewDidLoad()
-        tabBarView.isTranslucent = false
-        self.setUpTabBar()
-        tabBarView.delegate = self
-        tabBarView.selectedItem = homeItem
-    
-        Static.instance = self
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-         self.navigationController?.isNavigationBarHidden = true
-        
-        if let block = blockReloadData {
-            block()
-        }
+
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        
+        // Dispose of any resources that can be recreated.
     }
     
+
     func setUpTabBar() {
         
         self.tabBarView.tintColor = UIColor.red
@@ -96,18 +73,19 @@ class AVMainViewController: UIViewController, UITabBarDelegate, CAPSPageMenuDele
     func didMoveToPage(_ controller: UIViewController, index: Int) {
         switch index {
         case 0:
-            tabBarView.selectedItem = homeItem
+            tabBarView.selectedItem = configureItem
         case 1:
-            tabBarView.selectedItem = NewsItem
+            tabBarView.selectedItem = UITabBar
         case 2:
-            tabBarView.selectedItem = ServiceItem
+            tabBarView.selectedItem = historyImage
         default:
             tabBarView.selectedItem = personalItem
         }
     }
-
-    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-         pageMenu?.moveToPage(item.tag)
-    }
     
+    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        pageMenu?.moveToPage(item.tag)
+    }
+
+
 }

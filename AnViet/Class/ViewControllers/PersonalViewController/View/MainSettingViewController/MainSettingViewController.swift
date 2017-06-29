@@ -13,6 +13,7 @@ class MainSettingViewController: AVBaseViewController , UITabBarDelegate, CAPSPa
     @IBOutlet weak var tabBarView: UITabBar!
      var pageMenu: CAPSPageMenu?
     
+    @IBOutlet weak var diaryItem: UITabBarItem!
     @IBOutlet weak var journalItem: UITabBar!
     @IBOutlet weak var configureItem: UITabBarItem!
     @IBOutlet weak var historyImage: UITabBarItem!
@@ -20,7 +21,11 @@ class MainSettingViewController: AVBaseViewController , UITabBarDelegate, CAPSPa
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        tabBarView.delegate = self
+        self.setUpTabBar()
+        tabBarView.selectedItem = diaryItem
+        
+        self.navigationController?.isNavigationBarHidden = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,14 +38,14 @@ class MainSettingViewController: AVBaseViewController , UITabBarDelegate, CAPSPa
         
         self.tabBarView.tintColor = UIColor.red
         
-        let HomeVC      = AVHomeViewController()
-        let NewsVC      = AVNewsViewController()
-        let ServiceVC   = AVServiceViewController()
-        let PersonalVC  = AVPersonalViewController()
-        let controllerArray = [ AVBaseNavigationController(rootViewController: HomeVC),
-                                AVBaseNavigationController(rootViewController: NewsVC),
-                                AVBaseNavigationController(rootViewController: ServiceVC),
-                                AVBaseNavigationController(rootViewController: PersonalVC)]
+        let ThumbnailVC   = ThumbnailViewController()
+        let ConfigureItem = ConfigComputerViewController()
+        let TimelineVC    = TimelineViewController()
+        let InforVC       = InforComputerViewController()
+        let controllerArray = [ AVBaseNavigationController(rootViewController: ThumbnailVC),
+                                AVBaseNavigationController(rootViewController: ConfigureItem),
+                                AVBaseNavigationController(rootViewController: TimelineVC),
+                                AVBaseNavigationController(rootViewController: InforVC)]
         let parameters: [CAPSPageMenuOption] = [
             .scrollMenuBackgroundColor(UIColor(hex: "313131")),
             .viewBackgroundColor(UIColor.white),
@@ -58,7 +63,7 @@ class MainSettingViewController: AVBaseViewController , UITabBarDelegate, CAPSPa
             .menuItemMargin(1)
         ]
         
-        let heightTopView = self.heightStatusBar() + self.tabBarView.frame.height + 10
+        let heightTopView = self.tabBarView.frame.height + (self.navigationController?.navigationBar.layer.frame.height ?? 0) + self.heightStatusBar() + 3
         
         let framePapeMenu = CGRect(x: 0, y: heightTopView, width: self.view.bounds.width, height: self.view.bounds.height - heightTopView)
         pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: framePapeMenu, pageMenuOptions: parameters)
@@ -73,13 +78,13 @@ class MainSettingViewController: AVBaseViewController , UITabBarDelegate, CAPSPa
     func didMoveToPage(_ controller: UIViewController, index: Int) {
         switch index {
         case 0:
-            tabBarView.selectedItem = configureItem
+            tabBarView.selectedItem = diaryItem
         case 1:
-            tabBarView.selectedItem = UITabBar
+            tabBarView.selectedItem = configureItem
         case 2:
             tabBarView.selectedItem = historyImage
         default:
-            tabBarView.selectedItem = personalItem
+            tabBarView.selectedItem = inforItem
         }
     }
     

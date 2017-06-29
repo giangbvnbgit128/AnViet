@@ -69,6 +69,8 @@ extension AVPersonalViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
         case 0: // tên máy
+            let mainSetting = MainSettingViewController()
+            AVMainViewController.ShareInstance.navigationController?.pushViewController(mainSetting, animated: true)
             break
         case 1: // tên người dùng
             let userInforVC = UserInforViewController()

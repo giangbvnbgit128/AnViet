@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainSettingViewController" customModule="AnViet" customModuleProvider="target">
             <connections>
                 <outlet property="configureItem" destination="dxH-bw-QZb" id="3o0-x4-mdy"/>
+                <outlet property="diaryItem" destination="jIG-dt-9OF" id="GM5-Tu-hUt"/>
                 <outlet property="historyImage" destination="xNA-CL-jmT" id="fkN-2c-zxt"/>
                 <outlet property="inforItem" destination="C4D-H5-gUj" id="KAB-I6-Ca3"/>
                 <outlet property="journalItem" destination="20I-h5-kOu" id="CDX-jc-Dpf"/>
@@ -27,9 +28,9 @@
                     <rect key="frame" x="0.0" y="66" width="375" height="49"/>
                     <items>
                         <tabBarItem title="Nhật ký" image="tabbar_timeLine" id="jIG-dt-9OF"/>
-                        <tabBarItem title="Cấu hình" image="tabbar_config" id="dxH-bw-QZb"/>
-                        <tabBarItem title="Hình ảnh" image="tabbar_photo" id="xNA-CL-jmT"/>
-                        <tabBarItem title="Thông tin" image="tabbar_info" id="C4D-H5-gUj"/>
+                        <tabBarItem tag="1" title="Cấu hình" image="tabbar_config" id="dxH-bw-QZb"/>
+                        <tabBarItem tag="2" title="Hình ảnh" image="tabbar_photo" id="xNA-CL-jmT"/>
+                        <tabBarItem tag="3" title="Thông tin" image="tabbar_info" id="C4D-H5-gUj"/>
                     </items>
                     <color key="tintColor" red="0.61568627450000002" green="0.0" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <userDefinedRuntimeAttributes>

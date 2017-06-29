@@ -98,7 +98,7 @@ class AVMainViewController: UIViewController, UITabBarDelegate, CAPSPageMenuDele
         case 0:
             tabBarView.selectedItem = homeItem
         case 1:
-            tabBarView.selectedItem = NewsItem
+            tabBarView.selectedItem = newsItem
         case 2:
             tabBarView.selectedItem = ServiceItem
         default:

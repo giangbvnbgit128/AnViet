@@ -38,14 +38,17 @@ class MainSettingViewController: AVBaseViewController , UITabBarDelegate, CAPSPa
         
         self.tabBarView.tintColor = UIColor.red
         
-        let ThumbnailVC   = ThumbnailViewController()
-        let ConfigureItem = ConfigComputerViewController()
         let TimelineVC    = TimelineViewController()
+        let ConfigureItem = ConfigComputerViewController()
+        let ThumbnailVC   = ThumbnailViewController()
         let InforVC       = InforComputerViewController()
+        
+
         let controllerArray = [ AVBaseNavigationController(rootViewController: TimelineVC),
                                 AVBaseNavigationController(rootViewController: ConfigureItem),
                                 AVBaseNavigationController(rootViewController: ThumbnailVC),
-                                AVBaseNavigationController(rootViewController: InforVC)]
+                                AVBaseNavigationController(rootViewController: InforVC)
+                                ]
         let parameters: [CAPSPageMenuOption] = [
             .scrollMenuBackgroundColor(UIColor(hex: "313131")),
             .viewBackgroundColor(UIColor.white),

@@ -85,6 +85,14 @@
 		536EE2E01ED727C100954E60 /* AVLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 536EE2DE1ED727C100954E60 /* AVLoginViewController.xib */; };
 		536EE2E31ED72ECA00954E60 /* AVRegisterAccountAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536EE2E11ED72ECA00954E60 /* AVRegisterAccountAccountViewController.swift */; };
 		536EE2E41ED72ECA00954E60 /* AVRegisterAccountAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 536EE2E21ED72ECA00954E60 /* AVRegisterAccountAccountViewController.xib */; };
+		538A21A31F06BCE800C1BA1B /* HeaderInforTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538A21A11F06BCE800C1BA1B /* HeaderInforTableViewCell.swift */; };
+		538A21A41F06BCE800C1BA1B /* HeaderInforTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 538A21A21F06BCE800C1BA1B /* HeaderInforTableViewCell.xib */; };
+		538A21A71F06BCFB00C1BA1B /* InforTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538A21A51F06BCFB00C1BA1B /* InforTableViewCell.swift */; };
+		538A21A81F06BCFB00C1BA1B /* InforTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 538A21A61F06BCFB00C1BA1B /* InforTableViewCell.xib */; };
+		538A21AC1F06C93100C1BA1B /* configTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538A21AA1F06C93100C1BA1B /* configTableViewCell.swift */; };
+		538A21AD1F06C93100C1BA1B /* configTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 538A21AB1F06C93100C1BA1B /* configTableViewCell.xib */; };
+		538A21B01F06C97800C1BA1B /* headerConfigTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538A21AE1F06C97800C1BA1B /* headerConfigTableViewCell.swift */; };
+		538A21B11F06C97800C1BA1B /* headerConfigTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 538A21AF1F06C97800C1BA1B /* headerConfigTableViewCell.xib */; };
 		53B20A291ED6011900332200 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B20A0B1ED6011900332200 /* Array.swift */; };
 		53B20A2A1ED6011900332200 /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B20A0C1ED6011900332200 /* CGFloat.swift */; };
 		53B20A2B1ED6011900332200 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B20A0D1ED6011900332200 /* Dictionary.swift */; };
@@ -265,6 +273,14 @@
 		536EE2DE1ED727C100954E60 /* AVLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AVLoginViewController.xib; sourceTree = "<group>"; };
 		536EE2E11ED72ECA00954E60 /* AVRegisterAccountAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVRegisterAccountAccountViewController.swift; sourceTree = "<group>"; };
 		536EE2E21ED72ECA00954E60 /* AVRegisterAccountAccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AVRegisterAccountAccountViewController.xib; sourceTree = "<group>"; };
+		538A21A11F06BCE800C1BA1B /* HeaderInforTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderInforTableViewCell.swift; sourceTree = "<group>"; };
+		538A21A21F06BCE800C1BA1B /* HeaderInforTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderInforTableViewCell.xib; sourceTree = "<group>"; };
+		538A21A51F06BCFB00C1BA1B /* InforTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InforTableViewCell.swift; sourceTree = "<group>"; };
+		538A21A61F06BCFB00C1BA1B /* InforTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InforTableViewCell.xib; sourceTree = "<group>"; };
+		538A21AA1F06C93100C1BA1B /* configTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = configTableViewCell.swift; sourceTree = "<group>"; };
+		538A21AB1F06C93100C1BA1B /* configTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = configTableViewCell.xib; sourceTree = "<group>"; };
+		538A21AE1F06C97800C1BA1B /* headerConfigTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = headerConfigTableViewCell.swift; sourceTree = "<group>"; };
+		538A21AF1F06C97800C1BA1B /* headerConfigTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = headerConfigTableViewCell.xib; sourceTree = "<group>"; };
 		53B20A0B1ED6011900332200 /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		53B20A0C1ED6011900332200 /* CGFloat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloat.swift; sourceTree = "<group>"; };
 		53B20A0D1ED6011900332200 /* Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
@@ -497,6 +513,7 @@
 		533DF8101F040AAF0005EE89 /* ConfigComputerViewController */ = {
 			isa = PBXGroup;
 			children = (
+				538A21A91F06C91B00C1BA1B /* Cell */,
 				533DF8191F040B620005EE89 /* ConfigComputerViewController.swift */,
 				533DF81A1F040B620005EE89 /* ConfigComputerViewController.xib */,
 			);
@@ -506,6 +523,7 @@
 		533DF8111F040AAF0005EE89 /* InforComputerViewController */ = {
 			isa = PBXGroup;
 			children = (
+				538A21A01F06BCC400C1BA1B /* Cell */,
 				533DF81D1F040B750005EE89 /* InforComputerViewController.swift */,
 				533DF81E1F040B750005EE89 /* InforComputerViewController.xib */,
 			);
@@ -753,6 +771,28 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		538A21A01F06BCC400C1BA1B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				538A21A11F06BCE800C1BA1B /* HeaderInforTableViewCell.swift */,
+				538A21A21F06BCE800C1BA1B /* HeaderInforTableViewCell.xib */,
+				538A21A51F06BCFB00C1BA1B /* InforTableViewCell.swift */,
+				538A21A61F06BCFB00C1BA1B /* InforTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		538A21A91F06C91B00C1BA1B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				538A21AA1F06C93100C1BA1B /* configTableViewCell.swift */,
+				538A21AB1F06C93100C1BA1B /* configTableViewCell.xib */,
+				538A21AE1F06C97800C1BA1B /* headerConfigTableViewCell.swift */,
+				538A21AF1F06C97800C1BA1B /* headerConfigTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		53B20A0A1ED6011900332200 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -982,9 +1022,12 @@
 			files = (
 				531261391EE9E64A0014D87B /* AVProrsonalTableViewCell.xib in Resources */,
 				4B0BD3EA1F063FAF0040CCA5 /* TimeLineHeaderTableViewCell.xib in Resources */,
+				538A21B11F06C97800C1BA1B /* headerConfigTableViewCell.xib in Resources */,
 				53661B9B1EDA63B600BD01E4 /* AVHomeViewController.xib in Resources */,
 				533DF8181F040ADB0005EE89 /* MainSettingViewController.xib in Resources */,
+				538A21A81F06BCFB00C1BA1B /* InforTableViewCell.xib in Resources */,
 				5312612B1EE9D5170014D87B /* AVNewsTableViewCell.xib in Resources */,
+				538A21AD1F06C93100C1BA1B /* configTableViewCell.xib in Resources */,
 				5312612F1EE9DAFC0014D87B /* AVHeaderNewsTableViewCell.xib in Resources */,
 				531261341EE9E2B60014D87B /* AVServiceCollectionViewCell.xib in Resources */,
 				53661BA71EDA63F800BD01E4 /* AVServiceViewController.xib in Resources */,
@@ -1014,6 +1057,7 @@
 				4B0BD3F61F0649C00040CCA5 /* TimeLineImageCollectionViewCell.xib in Resources */,
 				53BA65341EDDCB7D0027A463 /* AVNewFeedFiveImageTableViewCell.xib in Resources */,
 				4B0BD3F21F0646FD0040CCA5 /* TimeLineImageTableViewCell.xib in Resources */,
+				538A21A41F06BCE800C1BA1B /* HeaderInforTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1109,6 +1153,7 @@
 				53B20A2D1ED6011900332200 /* Float.swift in Sources */,
 				53B20A311ED6011900332200 /* NSNotificationCenter.swift in Sources */,
 				53BA65331EDDCB7D0027A463 /* AVNewFeedFiveImageTableViewCell.swift in Sources */,
+				538A21A31F06BCE800C1BA1B /* HeaderInforTableViewCell.swift in Sources */,
 				53B20A491ED6017A00332200 /* AVBaseRouter.swift in Sources */,
 				536EE2DF1ED727C100954E60 /* AVLoginViewController.swift in Sources */,
 				4B0BD3F51F0649C00040CCA5 /* TimeLineImageCollectionViewCell.swift in Sources */,
@@ -1120,11 +1165,13 @@
 				535BE7F31ED5FAF500363A7B /* AVBaseViewController.swift in Sources */,
 				53B20A321ED6011900332200 /* NSObject.swift in Sources */,
 				53B20A401ED6011900332200 /* UIScreen.swift in Sources */,
+				538A21B01F06C97800C1BA1B /* headerConfigTableViewCell.swift in Sources */,
 				536EE2E31ED72ECA00954E60 /* AVRegisterAccountAccountViewController.swift in Sources */,
 				53B20A2E1ED6011900332200 /* GCD.swift in Sources */,
 				5312612A1EE9D5170014D87B /* AVNewsTableViewCell.swift in Sources */,
 				4B0BD3ED1F0646680040CCA5 /* TimeLineNoImageTableViewCell.swift in Sources */,
 				53661B9A1EDA63B600BD01E4 /* AVHomeViewController.swift in Sources */,
+				538A21A71F06BCFB00C1BA1B /* InforTableViewCell.swift in Sources */,
 				533DF8231F040B8E0005EE89 /* ThumbnailViewController.swift in Sources */,
 				4B0BD3F81F064AC20040CCA5 /* AVTimeLineRouter.swift in Sources */,
 				533DF81B1F040B620005EE89 /* ConfigComputerViewController.swift in Sources */,
@@ -1161,6 +1208,7 @@
 				4B0BD3F11F0646FD0040CCA5 /* TimeLineImageTableViewCell.swift in Sources */,
 				4B0BD3E91F063FAF0040CCA5 /* TimeLineHeaderTableViewCell.swift in Sources */,
 				5364E54D1ED73FDD005A8078 /* AVRegisterAccountRouter.swift in Sources */,
+				538A21AC1F06C93100C1BA1B /* configTableViewCell.swift in Sources */,
 				53E4A3341EEDA886006D2307 /* AVBaseNewFeedTableViewCell.swift in Sources */,
 				53BA65271EDDCA850027A463 /* AVNewFeedThreeImageTableViewCell.swift in Sources */,
 				53B20A471ED6015A00332200 /* AVBaseTableViewCell.swift in Sources */,

@@ -12,7 +12,7 @@ import Alamofire
 
 
 enum TimeLineRouterEndPoint {
-    case getTimeLine(userId:String ,token:String,limit:String)
+    case getTimeLine(userId:String ,token:String,limit:String,postid:String)
 }
 
 class AVTimeLineRouter: AVBaseRouter {
@@ -30,7 +30,7 @@ class AVTimeLineRouter: AVBaseRouter {
     }
     override var path: String {
         switch endpoint {
-         case .getTimeLine(let userId, let token,let limit): return "api/get_list_post_of_user?user_id=\(userId)&token=\(token)&limit=\(limit)"
+         case .getTimeLine(let userId, let token,let limit,let postid): return "api/get_list_post_of_user?user_id=\(userId)&token=\(token)&limit=\(limit)&post_id=\(postid)"
         }
     }
     override var parameters: APIParams {

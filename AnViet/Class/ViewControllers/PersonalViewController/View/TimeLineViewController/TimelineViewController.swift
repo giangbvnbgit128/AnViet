@@ -29,7 +29,7 @@ class TimelineViewController: AVBaseViewController {
         self.tableview.registerCellNib(TimeLineHeaderTableViewCell.self)
         self.tableview.registerCellNib(TimeLineImageTableViewCell.self)
         
-        self.getListPost(UserID: user.data.id, token: user.data.token, limit: "10")
+        self.getListPost(UserID: user.data.id, token: user.data.token, limit: "10",postId: "0",isload: false)
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,19 +37,27 @@ class TimelineViewController: AVBaseViewController {
     }
     
 //MARK: CallAPi getlistpost
-    func getListPost(UserID:String,token:String,limit:String) {
+    func getListPost(UserID:String,token:String,limit:String,postId:String,isload:Bool) {
         self.showLoading()
-        Alamofire.request(AVTimeLineRouter( endpoint: .getTimeLine(userId: UserID, token: token, limit: limit))).responseJSON { (response) in
+        Alamofire.request(AVTimeLineRouter( endpoint: .getTimeLine(userId: UserID, token: token, limit: limit,postid: postId))).responseJSON { (response) in
             self.stopLoading()
             switch response.result {
             case .success(let value):
                 let newValue = value as? [String : AnyObject]
-                self.timeLine = Mapper<Timeline>().map(JSONObject: newValue)!
-                if self.timeLine.error.compare("FALSE") == .orderedSame {
+                let data = Mapper<Timeline>().map(JSONObject: newValue)!
+                if data.error.compare("FALSE") == .orderedSame {
+                    if data.data.Post.count > 0 {
+                        if isload {
+                          self.timeLine.data.Post[0].post_data += data.data.Post[0].post_data
+                        } else {
+                            self.timeLine = data
+                        }
+                     
+                    }
                     self.tableview.reloadData()
                 } else {
                     let nameApplication = Bundle.main.infoDictionary![kCFBundleNameKey as String] as! String
-                    self.showAler(message: self.timeLine.mess, title: nameApplication)
+                    self.showAler(message: data.mess, title: nameApplication)
                 }
             case .failure(_):
                 print("AAAAA")
@@ -108,4 +116,21 @@ extension TimelineViewController: UITableViewDataSource {
     }
 }
 
+extension TimelineViewController : UIScrollViewDelegate {
+    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offset = scrollView.contentOffset
+        let bounds = scrollView.bounds
+        let size = scrollView.contentSize
+        let inset = scrollView.contentInset
+        let y = CGFloat(offset.y + bounds.size.height - inset.bottom)
+        let h = CGFloat(size.height)
+        
+        let reload_distance = CGFloat(10)
+        if(y > (h + reload_distance)) {
+            if self.timeLine.data.Post.count > 0 {
+             self.getListPost(UserID: user.data.id, token: user.data.token, limit: "10",postId: self.timeLine.data.Post[0].post_data[self.timeLine.data.Post[0].post_data.count - 1].id,isload: true)
+            }
 
+        }
+    }
+}

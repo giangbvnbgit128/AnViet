@@ -21,7 +21,6 @@ class InforComputerViewController: AVBaseViewController {
         tableView.dataSource = self
         self.tableView.registerCellNib(InforTableViewCell.self)
         self.tableView.registerCellNib(HeaderInforTableViewCell.self)
-        self.automaticallyAdjustsScrollViewInsets = true
         
     }
     
@@ -57,6 +56,10 @@ extension InforComputerViewController: UITableViewDelegate {
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 260
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 0.001
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

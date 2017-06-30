@@ -13,22 +13,29 @@ class TimeLineImageTableViewCell: AVBaseTableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var lbltitle: UILabel!
     var arrayImage:[ImageItem] = []
+    var host:String = ""
     override func awakeFromNib() {
         super.awakeFromNib()
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.registerNib(TimeLineImageCollectionViewCell.self)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
     }
-    func configCell(title:String,arrImage:[ImageItem]) {
+    func configCell(title:String,arrImage:[ImageItem],host:String) {
         self.lbltitle.text = title
         self.arrayImage = arrImage
+        self.host = host
+        self.collectionView.reloadData()
     }
 }
 extension TimeLineImageTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeue(TimeLineImageCollectionViewCell.self, forIndexPath: indexPath) as TimeLineImageCollectionViewCell
+        cell.configCell(url: self.host + self.arrayImage[indexPath.row].urlImage)
         return cell
     }
     

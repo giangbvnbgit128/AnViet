@@ -93,6 +93,8 @@
 		538A21AD1F06C93100C1BA1B /* configTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 538A21AB1F06C93100C1BA1B /* configTableViewCell.xib */; };
 		538A21B01F06C97800C1BA1B /* headerConfigTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538A21AE1F06C97800C1BA1B /* headerConfigTableViewCell.swift */; };
 		538A21B11F06C97800C1BA1B /* headerConfigTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 538A21AF1F06C97800C1BA1B /* headerConfigTableViewCell.xib */; };
+		538A21B51F06DD5300C1BA1B /* MissPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538A21B31F06DD5300C1BA1B /* MissPasswordViewController.swift */; };
+		538A21B61F06DD5300C1BA1B /* MissPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 538A21B41F06DD5300C1BA1B /* MissPasswordViewController.xib */; };
 		53B20A291ED6011900332200 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B20A0B1ED6011900332200 /* Array.swift */; };
 		53B20A2A1ED6011900332200 /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B20A0C1ED6011900332200 /* CGFloat.swift */; };
 		53B20A2B1ED6011900332200 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B20A0D1ED6011900332200 /* Dictionary.swift */; };
@@ -281,6 +283,8 @@
 		538A21AB1F06C93100C1BA1B /* configTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = configTableViewCell.xib; sourceTree = "<group>"; };
 		538A21AE1F06C97800C1BA1B /* headerConfigTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = headerConfigTableViewCell.swift; sourceTree = "<group>"; };
 		538A21AF1F06C97800C1BA1B /* headerConfigTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = headerConfigTableViewCell.xib; sourceTree = "<group>"; };
+		538A21B31F06DD5300C1BA1B /* MissPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissPasswordViewController.swift; sourceTree = "<group>"; };
+		538A21B41F06DD5300C1BA1B /* MissPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MissPasswordViewController.xib; sourceTree = "<group>"; };
 		53B20A0B1ED6011900332200 /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		53B20A0C1ED6011900332200 /* CGFloat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloat.swift; sourceTree = "<group>"; };
 		53B20A0D1ED6011900332200 /* Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
@@ -686,6 +690,7 @@
 		535BE7ED1ED5FA3E00363A7B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				538A21B21F06DD3300C1BA1B /* MissPassword */,
 				533C7E861EF1A1880009AE18 /* PostViewController */,
 				53661B941EDA639100BD01E4 /* HomeViewController */,
 				53661B951EDA639100BD01E4 /* NewViewController */,
@@ -791,6 +796,15 @@
 				538A21AF1F06C97800C1BA1B /* headerConfigTableViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		538A21B21F06DD3300C1BA1B /* MissPassword */ = {
+			isa = PBXGroup;
+			children = (
+				538A21B31F06DD5300C1BA1B /* MissPasswordViewController.swift */,
+				538A21B41F06DD5300C1BA1B /* MissPasswordViewController.xib */,
+			);
+			path = MissPassword;
 			sourceTree = "<group>";
 		};
 		53B20A0A1ED6011900332200 /* Extensions */ = {
@@ -1022,6 +1036,7 @@
 			files = (
 				531261391EE9E64A0014D87B /* AVProrsonalTableViewCell.xib in Resources */,
 				4B0BD3EA1F063FAF0040CCA5 /* TimeLineHeaderTableViewCell.xib in Resources */,
+				538A21B61F06DD5300C1BA1B /* MissPasswordViewController.xib in Resources */,
 				538A21B11F06C97800C1BA1B /* headerConfigTableViewCell.xib in Resources */,
 				53661B9B1EDA63B600BD01E4 /* AVHomeViewController.xib in Resources */,
 				533DF8181F040ADB0005EE89 /* MainSettingViewController.xib in Resources */,
@@ -1214,6 +1229,7 @@
 				53B20A471ED6015A00332200 /* AVBaseTableViewCell.swift in Sources */,
 				533C7E941EF1A5810009AE18 /* TPKeyboardAvoidingCollectionView.m in Sources */,
 				533C7E971EF1A5810009AE18 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
+				538A21B51F06DD5300C1BA1B /* MissPasswordViewController.swift in Sources */,
 				53B20A371ED6011900332200 /* UIButton.swift in Sources */,
 				53B20A441ED6011900332200 /* UIViewController.swift in Sources */,
 				536C05601EF8477D0010AF77 /* AVUploadRouter.swift in Sources */,

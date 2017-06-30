@@ -1,12 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,6 +12,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AVLoginViewController" customModule="AnViet" customModuleProvider="target">
             <connections>
                 <outlet property="btnLogin" destination="hpv-uY-r73" id="dJt-2O-U8i"/>
+                <outlet property="btnMissPass" destination="JE3-qa-qJB" id="uxt-P2-obU"/>
+                <outlet property="btnRegis" destination="Acd-Sq-cXl" id="shj-Z9-w9S"/>
                 <outlet property="txtPassWord" destination="2Yr-Oe-GRZ" id="EVT-b1-OXk"/>
                 <outlet property="txtUserName" destination="MRF-Wi-PZg" id="xYM-lw-ftF"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -25,10 +25,9 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpv-uY-r73">
-                    <rect key="frame" x="31.5" y="305.5" width="312.5" height="56"/>
+                    <rect key="frame" x="19" y="152" width="338" height="56"/>
                     <color key="backgroundColor" red="0.71361386780000002" green="0.071951881049999999" blue="0.098300687969999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="hpv-uY-r73" secondAttribute="height" multiplier="312.5:56" id="Q4C-Lk-lZM"/>
                         <constraint firstAttribute="height" constant="56" id="nba-y0-Gzx"/>
                     </constraints>
                     <state key="normal" title="ĐĂNG NHẬP">
@@ -39,29 +38,29 @@
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mgd-50-TPL">
-                    <rect key="frame" x="31.5" y="173.5" width="312.5" height="112"/>
+                    <rect key="frame" x="19" y="20" width="338" height="112"/>
                     <subviews>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Số điện thoại*" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MRF-Wi-PZg">
-                            <rect key="frame" x="10" y="0.0" width="302.5" height="56"/>
+                            <rect key="frame" x="10" y="0.0" width="328" height="56"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4hf-Da-O7B">
-                            <rect key="frame" x="5" y="56" width="302.5" height="1"/>
+                            <rect key="frame" x="5" y="56" width="328" height="1"/>
                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="aX8-jq-cdr"/>
                             </constraints>
                         </view>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mật khẩu*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Yr-Oe-GRZ">
-                            <rect key="frame" x="10" y="56" width="302.5" height="56"/>
+                            <rect key="frame" x="10" y="56" width="328" height="56"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                         </textField>
                         <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iq1-Qc-lTH">
-                            <rect key="frame" x="5" y="110" width="302.5" height="1"/>
+                            <rect key="frame" x="5" y="110" width="328" height="1"/>
                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="Sfb-ig-UDx"/>
@@ -85,20 +84,44 @@
                         <constraint firstItem="MRF-Wi-PZg" firstAttribute="top" secondItem="mgd-50-TPL" secondAttribute="top" id="zie-dg-lzL"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quên mật khẩu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8dY-5K-2DS">
-                    <rect key="frame" x="31.5" y="381.5" width="116.5" height="20.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đăng ký" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="40b-fU-d06">
-                    <rect key="frame" x="281" y="381.5" width="63" height="20.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bằng việc đăng ký, tôi đồng ý điều khoản sử dụng của An Việt Computer" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vpi-ZF-0Gs">
-                    <rect key="frame" x="31.5" y="422" width="312.5" height="35.5"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QO3-aj-4UT">
+                    <rect key="frame" x="19" y="208" width="338" height="56"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JE3-qa-qJB">
+                            <rect key="frame" x="0.0" y="0.0" width="169" height="56"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="Quên mật khẩu">
+                                <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="actionMissPass:" destination="-1" eventType="touchUpInside" id="sj1-YZ-pBd"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Acd-Sq-cXl">
+                            <rect key="frame" x="169" y="0.0" width="169" height="56"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="Đăng ký">
+                                <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="acionRegisAccount:" destination="-1" eventType="touchUpInside" id="P24-BR-5LB"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Acd-Sq-cXl" firstAttribute="top" secondItem="QO3-aj-4UT" secondAttribute="top" id="FkG-RU-5do"/>
+                        <constraint firstItem="Acd-Sq-cXl" firstAttribute="width" secondItem="QO3-aj-4UT" secondAttribute="width" multiplier="1/2" id="Sfc-VJ-yrQ"/>
+                        <constraint firstItem="JE3-qa-qJB" firstAttribute="width" secondItem="QO3-aj-4UT" secondAttribute="width" multiplier="1/2" id="WBS-iy-ZtS"/>
+                        <constraint firstAttribute="bottom" secondItem="Acd-Sq-cXl" secondAttribute="bottom" id="XZN-25-xhj"/>
+                        <constraint firstItem="JE3-qa-qJB" firstAttribute="top" secondItem="QO3-aj-4UT" secondAttribute="top" id="f8h-Nz-ff1"/>
+                        <constraint firstItem="JE3-qa-qJB" firstAttribute="leading" secondItem="QO3-aj-4UT" secondAttribute="leading" id="fjV-2m-roU"/>
+                        <constraint firstAttribute="trailing" secondItem="Acd-Sq-cXl" secondAttribute="trailing" id="omA-DJ-0L5"/>
+                        <constraint firstAttribute="bottom" secondItem="JE3-qa-qJB" secondAttribute="bottom" id="xKy-Lx-s4I"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bằng việc đăng ký, tôi đồng ý điều khoản sử dụng của An Việt Computer" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vpi-ZF-0Gs">
+                    <rect key="frame" x="19" y="264" width="338" height="36"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="15"/>
                     <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                     <nil key="highlightedColor"/>
@@ -107,20 +130,20 @@
             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
             <constraints>
                 <constraint firstItem="mgd-50-TPL" firstAttribute="trailing" secondItem="hpv-uY-r73" secondAttribute="trailing" id="1Bf-2x-LR5"/>
-                <constraint firstItem="vpi-ZF-0Gs" firstAttribute="top" secondItem="8dY-5K-2DS" secondAttribute="bottom" constant="20" id="2hU-cm-yfV"/>
-                <constraint firstItem="hpv-uY-r73" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="4GJ-4b-WwB"/>
-                <constraint firstItem="mgd-50-TPL" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="A8Q-43-z5Y"/>
+                <constraint firstItem="QO3-aj-4UT" firstAttribute="top" secondItem="hpv-uY-r73" secondAttribute="bottom" id="7gN-El-T4T"/>
+                <constraint firstItem="vpi-ZF-0Gs" firstAttribute="leading" secondItem="hpv-uY-r73" secondAttribute="leading" id="Aet-8u-OPf"/>
+                <constraint firstItem="mgd-50-TPL" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="E96-C2-NF4"/>
+                <constraint firstItem="vpi-ZF-0Gs" firstAttribute="trailing" secondItem="hpv-uY-r73" secondAttribute="trailing" id="G11-B0-dMN"/>
                 <constraint firstItem="mgd-50-TPL" firstAttribute="leading" secondItem="hpv-uY-r73" secondAttribute="leading" id="H12-Yu-vGL"/>
-                <constraint firstItem="40b-fU-d06" firstAttribute="trailing" secondItem="hpv-uY-r73" secondAttribute="trailing" id="LH4-DK-m0R"/>
-                <constraint firstItem="8dY-5K-2DS" firstAttribute="leading" secondItem="hpv-uY-r73" secondAttribute="leading" id="LR8-mx-tVp"/>
-                <constraint firstItem="vpi-ZF-0Gs" firstAttribute="trailing" secondItem="40b-fU-d06" secondAttribute="trailing" id="S1Y-ds-yIT"/>
-                <constraint firstItem="8dY-5K-2DS" firstAttribute="top" secondItem="hpv-uY-r73" secondAttribute="bottom" constant="20" id="SSb-yv-eU4"/>
+                <constraint firstItem="mgd-50-TPL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="JeD-q3-Duc"/>
+                <constraint firstItem="QO3-aj-4UT" firstAttribute="leading" secondItem="mgd-50-TPL" secondAttribute="leading" id="LsM-UX-Uv6"/>
+                <constraint firstItem="QO3-aj-4UT" firstAttribute="trailing" secondItem="mgd-50-TPL" secondAttribute="trailing" id="S9T-LL-LXG"/>
                 <constraint firstItem="mgd-50-TPL" firstAttribute="height" secondItem="hpv-uY-r73" secondAttribute="height" multiplier="2:1" id="aOD-gf-aYI"/>
                 <constraint firstItem="hpv-uY-r73" firstAttribute="top" secondItem="mgd-50-TPL" secondAttribute="bottom" constant="20" id="b4g-RL-L5p"/>
-                <constraint firstItem="vpi-ZF-0Gs" firstAttribute="leading" secondItem="8dY-5K-2DS" secondAttribute="leading" id="blJ-QV-roA"/>
-                <constraint firstItem="40b-fU-d06" firstAttribute="top" secondItem="hpv-uY-r73" secondAttribute="bottom" constant="20" id="nvf-Iz-6ee"/>
+                <constraint firstItem="QO3-aj-4UT" firstAttribute="height" secondItem="hpv-uY-r73" secondAttribute="height" id="dD7-zN-Z7J"/>
+                <constraint firstItem="hpv-uY-r73" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="9/10" id="dwB-MJ-lME"/>
+                <constraint firstItem="vpi-ZF-0Gs" firstAttribute="top" secondItem="JE3-qa-qJB" secondAttribute="bottom" id="ijY-PK-OKz"/>
                 <constraint firstItem="MRF-Wi-PZg" firstAttribute="height" secondItem="hpv-uY-r73" secondAttribute="height" id="sBj-ee-Pm9"/>
-                <constraint firstItem="hpv-uY-r73" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="tge-e5-qco"/>
             </constraints>
             <point key="canvasLocation" x="32.5" y="63.5"/>
         </view>

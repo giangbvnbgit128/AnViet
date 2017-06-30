@@ -12,9 +12,16 @@ import ObjectMapper
 
 class AVLoginViewController: AVBaseViewController {
 
+    @IBOutlet weak var btnRegis: UIButton!
+    @IBOutlet weak var btnMissPass: UIButton!
     @IBOutlet weak var txtPassWord: UITextField!
     @IBOutlet weak var txtUserName: UITextField!
     @IBOutlet weak var btnLogin: UIButton!
+    
+    var attrs = [
+        NSFontAttributeName : UIFont.systemFont(ofSize: 14.0),
+        NSForegroundColorAttributeName : UIColor.blue,
+        NSUnderlineStyleAttributeName : 1] as [String : Any]
     
     var userInfor:UserInfor = UserInfor()
     
@@ -29,6 +36,11 @@ class AVLoginViewController: AVBaseViewController {
         txtPassWord.text = "0988225850"
         txtUserName.text = "0988225850"
         // Do any additional setup after loading the view.
+        let missPassAtt = NSMutableAttributedString(string:"Quên mật khẩu", attributes:attrs)
+        let regisAtt = NSMutableAttributedString(string:"Đăng ký", attributes:attrs)
+        self.btnMissPass.setAttributedTitle(missPassAtt, for: .normal)
+        self.btnRegis.setAttributedTitle(regisAtt, for: .normal)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,6 +71,18 @@ class AVLoginViewController: AVBaseViewController {
         }
         self.requsetLogin(userName: userName, passWord: pass.md5())
     }
+    
+    @IBAction func actionMissPass(_ sender: Any) {
+        // to do
+        
+    }
+    
+    @IBAction func acionRegisAccount(_ sender: Any) {
+        let regisVC = AVRegisterAccountAccountViewController()
+        self.navigationController?.pushViewController(regisVC, animated: true)
+    
+    }
+    
 //MARK: CallAPi Login
     
     func requsetLogin(userName:String,passWord:String) {

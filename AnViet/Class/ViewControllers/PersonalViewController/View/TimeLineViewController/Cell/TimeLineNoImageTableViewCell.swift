@@ -1,15 +1,16 @@
 //
-//  AVBaseTableViewCell.swift
+//  TimeLineNoImageTableViewCell.swift
 //  AnViet
 //
-//  Created by Bui Giang on 5/25/17.
+//  Created by Bui Van Giang on 6/30/17.
 //  Copyright © 2017 Bui Giang. All rights reserved.
 //
 
 import UIKit
 
-class AVBaseTableViewCell: UITableViewCell {
+class TimeLineNoImageTableViewCell: AVBaseTableViewCell {
 
+    @IBOutlet weak var lblTitle: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -18,7 +19,9 @@ class AVBaseTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
-    
+
+    func configCell(title:String) {
+        self.lblTitle.text = title
+    }
 }

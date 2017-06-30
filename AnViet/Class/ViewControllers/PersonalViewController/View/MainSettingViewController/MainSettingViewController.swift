@@ -27,7 +27,7 @@ class MainSettingViewController: AVBaseViewController , UITabBarDelegate, CAPSPa
         
         self.navigationController?.isNavigationBarHidden = false
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -42,9 +42,9 @@ class MainSettingViewController: AVBaseViewController , UITabBarDelegate, CAPSPa
         let ConfigureItem = ConfigComputerViewController()
         let TimelineVC    = TimelineViewController()
         let InforVC       = InforComputerViewController()
-        let controllerArray = [ AVBaseNavigationController(rootViewController: ThumbnailVC),
+        let controllerArray = [ AVBaseNavigationController(rootViewController: TimelineVC),
                                 AVBaseNavigationController(rootViewController: ConfigureItem),
-                                AVBaseNavigationController(rootViewController: TimelineVC),
+                                AVBaseNavigationController(rootViewController: ThumbnailVC),
                                 AVBaseNavigationController(rootViewController: InforVC)]
         let parameters: [CAPSPageMenuOption] = [
             .scrollMenuBackgroundColor(UIColor(hex: "313131")),

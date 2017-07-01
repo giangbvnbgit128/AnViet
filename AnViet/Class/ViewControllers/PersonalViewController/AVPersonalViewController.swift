@@ -11,7 +11,7 @@ import ObjectMapper
 
 class AVPersonalViewController: AVBaseViewController {
     @IBOutlet weak var tablView: UITableView!
-    let arrImg = ["person","person","service","about","changepass","log"]
+    let arrImg = ["person","person","service","about","changepass","log","about","log"]
     var arrTitle:[String] = [] // ["Dell Latitude 420","Trần Ngọc Bắc","Gói dịch vụ","About us","Đổi mật khẩu", "Log out"]
     
     var user:UserInfor = UserInfor()
@@ -27,12 +27,13 @@ class AVPersonalViewController: AVBaseViewController {
         let newValue = value as? [String : AnyObject]
         user = Mapper<UserInfor>().map(JSONObject: newValue)!
         
-        arrTitle.append(user.data.computername)
         arrTitle.append(user.data.name)
+        arrTitle.append(user.data.computername)
         arrTitle.append("Gói dịch vụ")
-        arrTitle.append("About us")
         arrTitle.append("Đổi mật khẩu")
         arrTitle.append("Log out")
+        arrTitle.append("About us")
+        arrTitle.append("Review US")
 
     }
 
@@ -68,21 +69,34 @@ extension AVPersonalViewController: UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
-        case 0: // tên máy
-            let mainSetting = MainSettingViewController()
-            AVMainViewController.ShareInstance.navigationController?.pushViewController(mainSetting, animated: true)
-            break
-        case 1: // tên người dùng
+        case 0: // tên nguoi dung
             let userInforVC = UserInforViewController()
             AVMainViewController.ShareInstance.navigationController?.pushViewController(userInforVC, animated: true)
             break
+        case 1: // tên may
+            let mainSetting = MainSettingViewController()
+            AVMainViewController.ShareInstance.navigationController?.pushViewController(mainSetting, animated: true)
+            break
+
         case 2: // gói dich vụ
             break
         case 3: // About us
+            let aboutUSVC = AVAboutUSViewController()
+            AVMainViewController.ShareInstance.navigationController?.pushViewController(aboutUSVC, animated: true)
             break
-        case 4: // Đổi mật khẩu
+        case 4:
+            let changePassVC = AVChangePasswordViewController()
+            AVMainViewController.ShareInstance.navigationController?.pushViewController(changePassVC, animated: true)
+            // Đổi mật khẩu
             break
         case 5: // log out
+            let tutorialVC = AVTutorialViewController()
+            let navVC = AVBaseNavigationController( rootViewController: tutorialVC)
+            AVMainViewController.ShareInstance.present(navVC, animated: false, completion: {
+                
+            })
+            break
+        case 6:
             let tutorialVC = AVTutorialViewController()
             let navVC = AVBaseNavigationController( rootViewController: tutorialVC)
             AVMainViewController.ShareInstance.present(navVC, animated: false, completion: {

@@ -74,6 +74,8 @@ class AVLoginViewController: AVBaseViewController {
     
     @IBAction func actionMissPass(_ sender: Any) {
         // to do
+        let missPassVC = MissPasswordViewController()
+        self.navigationController?.pushViewController(missPassVC, animated: true)
         
     }
     

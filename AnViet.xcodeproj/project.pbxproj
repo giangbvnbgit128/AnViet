@@ -95,6 +95,13 @@
 		538A21B11F06C97800C1BA1B /* headerConfigTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 538A21AF1F06C97800C1BA1B /* headerConfigTableViewCell.xib */; };
 		538A21B51F06DD5300C1BA1B /* MissPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538A21B31F06DD5300C1BA1B /* MissPasswordViewController.swift */; };
 		538A21B61F06DD5300C1BA1B /* MissPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 538A21B41F06DD5300C1BA1B /* MissPasswordViewController.xib */; };
+		538A21B81F07452800C1BA1B /* AVChangPassRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538A21B71F07452800C1BA1B /* AVChangPassRouter.swift */; };
+		538A21BC1F074DA300C1BA1B /* AVChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538A21BA1F074DA300C1BA1B /* AVChangePasswordViewController.swift */; };
+		538A21BD1F074DA300C1BA1B /* AVChangePasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 538A21BB1F074DA300C1BA1B /* AVChangePasswordViewController.xib */; };
+		538A21C11F07551900C1BA1B /* AVAboutUSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538A21BF1F07551900C1BA1B /* AVAboutUSViewController.swift */; };
+		538A21C21F07551900C1BA1B /* AVAboutUSViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 538A21C01F07551900C1BA1B /* AVAboutUSViewController.xib */; };
+		538A21C71F07558500C1BA1B /* AVReviewUSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538A21C51F07558500C1BA1B /* AVReviewUSViewController.swift */; };
+		538A21C81F07558500C1BA1B /* AVReviewUSViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 538A21C61F07558500C1BA1B /* AVReviewUSViewController.xib */; };
 		53B20A291ED6011900332200 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B20A0B1ED6011900332200 /* Array.swift */; };
 		53B20A2A1ED6011900332200 /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B20A0C1ED6011900332200 /* CGFloat.swift */; };
 		53B20A2B1ED6011900332200 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B20A0D1ED6011900332200 /* Dictionary.swift */; };
@@ -285,6 +292,13 @@
 		538A21AF1F06C97800C1BA1B /* headerConfigTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = headerConfigTableViewCell.xib; sourceTree = "<group>"; };
 		538A21B31F06DD5300C1BA1B /* MissPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissPasswordViewController.swift; sourceTree = "<group>"; };
 		538A21B41F06DD5300C1BA1B /* MissPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MissPasswordViewController.xib; sourceTree = "<group>"; };
+		538A21B71F07452800C1BA1B /* AVChangPassRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVChangPassRouter.swift; sourceTree = "<group>"; };
+		538A21BA1F074DA300C1BA1B /* AVChangePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVChangePasswordViewController.swift; sourceTree = "<group>"; };
+		538A21BB1F074DA300C1BA1B /* AVChangePasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AVChangePasswordViewController.xib; sourceTree = "<group>"; };
+		538A21BF1F07551900C1BA1B /* AVAboutUSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVAboutUSViewController.swift; sourceTree = "<group>"; };
+		538A21C01F07551900C1BA1B /* AVAboutUSViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AVAboutUSViewController.xib; sourceTree = "<group>"; };
+		538A21C51F07558500C1BA1B /* AVReviewUSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVReviewUSViewController.swift; sourceTree = "<group>"; };
+		538A21C61F07558500C1BA1B /* AVReviewUSViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AVReviewUSViewController.xib; sourceTree = "<group>"; };
 		53B20A0B1ED6011900332200 /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		53B20A0C1ED6011900332200 /* CGFloat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloat.swift; sourceTree = "<group>"; };
 		53B20A0D1ED6011900332200 /* Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
@@ -690,6 +704,9 @@
 		535BE7ED1ED5FA3E00363A7B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				538A21C31F07556D00C1BA1B /* ReviewUSViewController */,
+				538A21BE1F0754FE00C1BA1B /* AboutUSViewController */,
+				538A21B91F0746E300C1BA1B /* ChangePasswordViewController */,
 				538A21B21F06DD3300C1BA1B /* MissPassword */,
 				533C7E861EF1A1880009AE18 /* PostViewController */,
 				53661B941EDA639100BD01E4 /* HomeViewController */,
@@ -807,6 +824,41 @@
 			path = MissPassword;
 			sourceTree = "<group>";
 		};
+		538A21B91F0746E300C1BA1B /* ChangePasswordViewController */ = {
+			isa = PBXGroup;
+			children = (
+				538A21BA1F074DA300C1BA1B /* AVChangePasswordViewController.swift */,
+				538A21BB1F074DA300C1BA1B /* AVChangePasswordViewController.xib */,
+			);
+			path = ChangePasswordViewController;
+			sourceTree = "<group>";
+		};
+		538A21BE1F0754FE00C1BA1B /* AboutUSViewController */ = {
+			isa = PBXGroup;
+			children = (
+				538A21BF1F07551900C1BA1B /* AVAboutUSViewController.swift */,
+				538A21C01F07551900C1BA1B /* AVAboutUSViewController.xib */,
+			);
+			path = AboutUSViewController;
+			sourceTree = "<group>";
+		};
+		538A21C31F07556D00C1BA1B /* ReviewUSViewController */ = {
+			isa = PBXGroup;
+			children = (
+				538A21C41F07556D00C1BA1B /* Cell */,
+				538A21C51F07558500C1BA1B /* AVReviewUSViewController.swift */,
+				538A21C61F07558500C1BA1B /* AVReviewUSViewController.xib */,
+			);
+			path = ReviewUSViewController;
+			sourceTree = "<group>";
+		};
+		538A21C41F07556D00C1BA1B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		53B20A0A1ED6011900332200 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -846,6 +898,7 @@
 		53B20A281ED6011900332200 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				538A21B71F07452800C1BA1B /* AVChangPassRouter.swift */,
 				4B0BD3F71F064AC20040CCA5 /* AVTimeLineRouter.swift */,
 				5320B49E1F0181290059FAAE /* AVPostNews.swift */,
 				53B20A481ED6017A00332200 /* AVBaseRouter.swift */,
@@ -1035,6 +1088,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				531261391EE9E64A0014D87B /* AVProrsonalTableViewCell.xib in Resources */,
+				538A21C21F07551900C1BA1B /* AVAboutUSViewController.xib in Resources */,
 				4B0BD3EA1F063FAF0040CCA5 /* TimeLineHeaderTableViewCell.xib in Resources */,
 				538A21B61F06DD5300C1BA1B /* MissPasswordViewController.xib in Resources */,
 				538A21B11F06C97800C1BA1B /* headerConfigTableViewCell.xib in Resources */,
@@ -1042,6 +1096,7 @@
 				533DF8181F040ADB0005EE89 /* MainSettingViewController.xib in Resources */,
 				538A21A81F06BCFB00C1BA1B /* InforTableViewCell.xib in Resources */,
 				5312612B1EE9D5170014D87B /* AVNewsTableViewCell.xib in Resources */,
+				538A21C81F07558500C1BA1B /* AVReviewUSViewController.xib in Resources */,
 				538A21AD1F06C93100C1BA1B /* configTableViewCell.xib in Resources */,
 				5312612F1EE9DAFC0014D87B /* AVHeaderNewsTableViewCell.xib in Resources */,
 				531261341EE9E2B60014D87B /* AVServiceCollectionViewCell.xib in Resources */,
@@ -1068,6 +1123,7 @@
 				535BE7B91ED5F92200363A7B /* Main.storyboard in Resources */,
 				53B20A4F1ED6071300332200 /* AVTutorialViewController.xib in Resources */,
 				533DF8281F040BA10005EE89 /* TimelineViewController.xib in Resources */,
+				538A21BD1F074DA300C1BA1B /* AVChangePasswordViewController.xib in Resources */,
 				536EE2E41ED72ECA00954E60 /* AVRegisterAccountAccountViewController.xib in Resources */,
 				4B0BD3F61F0649C00040CCA5 /* TimeLineImageCollectionViewCell.xib in Resources */,
 				53BA65341EDDCB7D0027A463 /* AVNewFeedFiveImageTableViewCell.xib in Resources */,
@@ -1163,6 +1219,7 @@
 				53B20A3B1ED6011900332200 /* UIFont.swift in Sources */,
 				53661B9E1EDA63CF00BD01E4 /* AVNewsViewController.swift in Sources */,
 				53B20A331ED6011900332200 /* NSString.swift in Sources */,
+				538A21BC1F074DA300C1BA1B /* AVChangePasswordViewController.swift in Sources */,
 				533749DB1EDAC59D00312AA5 /* CAPSPageMenu+UIScrollViewDelegate.swift in Sources */,
 				53B20A551ED6075500332200 /* AVBaseCollectionViewCell.swift in Sources */,
 				53B20A2D1ED6011900332200 /* Float.swift in Sources */,
@@ -1197,6 +1254,7 @@
 				531261331EE9E2B60014D87B /* AVServiceCollectionViewCell.swift in Sources */,
 				53B20A361ED6011900332200 /* String.swift in Sources */,
 				53B20A2C1ED6011900332200 /* Double.swift in Sources */,
+				538A21C11F07551900C1BA1B /* AVAboutUSViewController.swift in Sources */,
 				53B20A3F1ED6011900332200 /* UINavigationController.swift in Sources */,
 				533749DE1EDAC59D00312AA5 /* MenuItemView.swift in Sources */,
 				53EE14201EE5DABA0089C2B1 /* AVNewsFeedRouter.swift in Sources */,
@@ -1210,6 +1268,7 @@
 				53B20A411ED6011900332200 /* UITabBarController.swift in Sources */,
 				53EE14221EE5DD360089C2B1 /* NewsItem.swift in Sources */,
 				53C10E6D1EDDFE2800C24B7C /* UserInfor.swift in Sources */,
+				538A21C71F07558500C1BA1B /* AVReviewUSViewController.swift in Sources */,
 				533C7E961EF1A5810009AE18 /* TPKeyboardAvoidingTableView.m in Sources */,
 				533749D91EDAC59D00312AA5 /* CAPSPageMenu+UIConfiguration.swift in Sources */,
 				53661BA21EDA63E400BD01E4 /* AVPersonalViewController.swift in Sources */,
@@ -1231,6 +1290,7 @@
 				533C7E971EF1A5810009AE18 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				538A21B51F06DD5300C1BA1B /* MissPasswordViewController.swift in Sources */,
 				53B20A371ED6011900332200 /* UIButton.swift in Sources */,
+				538A21B81F07452800C1BA1B /* AVChangPassRouter.swift in Sources */,
 				53B20A441ED6011900332200 /* UIViewController.swift in Sources */,
 				536C05601EF8477D0010AF77 /* AVUploadRouter.swift in Sources */,
 				53B20A3D1ED6011900332200 /* UILabel.swift in Sources */,

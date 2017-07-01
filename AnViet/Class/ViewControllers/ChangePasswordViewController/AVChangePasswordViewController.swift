@@ -1,5 +1,5 @@
 //
-//  MissPasswordViewController.swift
+//  AVChangePasswordViewController.swift
 //  AnViet
 //
 //  Created by Bui Giang on 7/1/17.
@@ -8,23 +8,18 @@
 
 import UIKit
 
-class MissPasswordViewController: UIViewController {
+class AVChangePasswordViewController: AVBaseViewController {
 
-    @IBOutlet weak var tfNumberPhone: UITextField!
-    @IBOutlet weak var btnAccept: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.btnAccept.layer.cornerRadius = 4
+
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func actionAccept(_ sender: Any) {
-        
-    }
-//MARK: -Call Api change password
     
-    
+
 }

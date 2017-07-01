@@ -80,28 +80,24 @@ extension AVPersonalViewController: UITableViewDataSource {
 
         case 2: // gói dich vụ
             break
-        case 3: // About us
+        case 3:
+            let changePassVC = AVChangePasswordViewController()
+            AVMainViewController.ShareInstance.navigationController?.pushViewController(changePassVC, animated: true)
+            break
+        case 4:
+            let tutorialVC = AVTutorialViewController()
+            let navVC = AVBaseNavigationController( rootViewController: tutorialVC)
+            AVMainViewController.ShareInstance.present(navVC, animated: false, completion: {
+                
+            })
+            break
+        case 5:
             let aboutUSVC = AVAboutUSViewController()
             AVMainViewController.ShareInstance.navigationController?.pushViewController(aboutUSVC, animated: true)
             break
-        case 4:
-            let changePassVC = AVChangePasswordViewController()
-            AVMainViewController.ShareInstance.navigationController?.pushViewController(changePassVC, animated: true)
-            // Đổi mật khẩu
-            break
-        case 5: // log out
-            let tutorialVC = AVTutorialViewController()
-            let navVC = AVBaseNavigationController( rootViewController: tutorialVC)
-            AVMainViewController.ShareInstance.present(navVC, animated: false, completion: {
-                
-            })
-            break
         case 6:
-            let tutorialVC = AVTutorialViewController()
-            let navVC = AVBaseNavigationController( rootViewController: tutorialVC)
-            AVMainViewController.ShareInstance.present(navVC, animated: false, completion: {
-                
-            })
+            let reviewVC = AVReviewUSViewController()
+            AVMainViewController.ShareInstance.navigationController?.pushViewController(reviewVC, animated: true)
             break
         default:
             break

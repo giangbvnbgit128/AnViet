@@ -78,6 +78,11 @@ class PostViewController: AVBaseViewController {
 
 // MARK: - Send Post News
     override func clickRightButtom() {
+        let content = self.txtContent.text ?? ""
+        if content.characters.count == 0 {
+            self.showAler(message: "Thiếu nội dung", title: "Lỗi")
+            return
+        }
         var arrayImageData:[Data] = []
         for i in 0..<arrImage.count {
         arrayImageData.append(UIImagePNGRepresentation(arrImage[i])!)
@@ -85,15 +90,17 @@ class PostViewController: AVBaseViewController {
         }
         
         var params = [String:AnyObject]()
-        params["image"] = arrayImageData[0] as AnyObject
+        if arrayImageData.count > 0 {
+            params["image"] = arrayImageData[0] as AnyObject
+        }
+        
         for i in 0..<arrayImageData.count {
+
             DispatchQueue.main.async {
                 self.upLoadImage(image: arrayImageData[i], complete: {
                     self.countImageLoadFinish += 1
                     if self.countImageLoadFinish == arrayImageData.count {
                         let strImage:String = self.formatJsonForUpload(arrayImage: self.arrayImageJSON)
-                        let content = self.txtContent.text ?? ""
-                        
                         self.postNews(image: strImage, content: content, complete: {
                             self.stopLoading()
                         })
@@ -102,6 +109,11 @@ class PostViewController: AVBaseViewController {
                     }
                 })
             }
+        }
+        if arrayImageData.count == 0 {
+            self.postNews(image: "", content: content, complete: {
+                self.stopLoading()
+            })
         }
  
     }

@@ -15,7 +15,7 @@ class UserInfor: Mappable{
     var mess:String = ""
     var data:DataInfor = DataInfor()
     private var data1:DataInfor?
-    private var data2:[DataInfor]?
+    private var data2:[DataInfor] = []
     
     init() {
         
@@ -34,7 +34,10 @@ class UserInfor: Mappable{
         if data1 != nil {
             data = data1!
         } else {
-            data = (data2?[0])!
+            if data2.count > 0 {
+            data = (data2[0])
+            }
+
         }
     }
     

@@ -11,15 +11,15 @@ import Alamofire
 
 
 
-enum ChangPassEndPoint {
-    case changePass(userId:String ,token:String,limit:String,postid:String)
+enum ChangePassEndPoint {
+    case changePass(userId:String ,token:String,currentPass:String,newPass:String)
 }
 
 class AVChangPassRouter: AVBaseRouter {
    
-    var endpoint: ChangPassEndPoint
+    var endpoint: ChangePassEndPoint
     
-    init(endpoint: ChangPassEndPoint) {
+    init(endpoint: ChangePassEndPoint) {
         self.endpoint = endpoint
     }
     
@@ -30,7 +30,7 @@ class AVChangPassRouter: AVBaseRouter {
     }
     override var path: String {
         switch endpoint {
-         case .changePass(let userId, let token,let limit,let postid): return "api/get_list_post_of_user?user_id=\(userId)&token=\(token)&limit=\(limit)&post_id=\(postid)"
+         case .changePass(let userId, let token,let currentPass,let newPass): return "api/change_password?user_id=\(userId)&token=\(token)&password=\(currentPass)&new_password=\(newPass)"
         }
     }
     override var parameters: APIParams {

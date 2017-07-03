@@ -18,7 +18,9 @@ class ThumbnailViewController: AVBaseViewController {
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         self.collectionView.registerNib(AVServiceCollectionViewCell.self)
-        
+        MainSettingViewController.ShareInstance.blockHiddenRightItemNav = {() in
+
+        }
     }
     
     override func didReceiveMemoryWarning() {

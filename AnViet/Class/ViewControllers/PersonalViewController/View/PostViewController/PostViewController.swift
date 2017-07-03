@@ -22,7 +22,6 @@ class PostViewController: AVBaseViewController {
     var imageUploadData:ImageUpload = ImageUpload()
     var arrayImageJSON:[DataImageUpload] = []
     var user:UserInfor = UserInfor()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
@@ -30,13 +29,24 @@ class PostViewController: AVBaseViewController {
         collectionView.registerNib(AVImageChooseCollectionViewCell.self)
         
         self.navigationController?.isNavigationBarHidden = false
-        self.setRightBarIconParent()
-        
         // setup textView
         self.txtContent.layer.borderWidth = 1
         self.txtContent.layer.borderColor = UIColor.black.cgColor
+//        self.navigationController?.isNavigationBarHidden = true
+    
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        MainSettingViewController.ShareInstance.blockHiddenRightItemNav = {() in
+            self.postAllNews()
+        }
+        
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -78,6 +88,10 @@ class PostViewController: AVBaseViewController {
 
 // MARK: - Send Post News
     override func clickRightButtom() {
+        
+    }
+    
+    func postAllNews() {
         let content = self.txtContent.text ?? ""
         if content.characters.count == 0 {
             self.showAler(message: "Thiếu nội dung", title: "Lỗi")
@@ -85,8 +99,8 @@ class PostViewController: AVBaseViewController {
         }
         var arrayImageData:[Data] = []
         for i in 0..<arrImage.count {
-        arrayImageData.append(UIImagePNGRepresentation(arrImage[i])!)
-        
+            arrayImageData.append(UIImagePNGRepresentation(arrImage[i])!)
+            
         }
         
         var params = [String:AnyObject]()
@@ -95,7 +109,7 @@ class PostViewController: AVBaseViewController {
         }
         
         for i in 0..<arrayImageData.count {
-
+            
             DispatchQueue.main.async {
                 self.upLoadImage(image: arrayImageData[i], complete: {
                     self.countImageLoadFinish += 1
@@ -105,7 +119,7 @@ class PostViewController: AVBaseViewController {
                             self.stopLoading()
                         })
                         
-
+                        
                     }
                 })
             }
@@ -115,7 +129,7 @@ class PostViewController: AVBaseViewController {
                 self.stopLoading()
             })
         }
- 
+
     }
     
     func postNews(image:String,content:String,complete: (()-> Void)) {

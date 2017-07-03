@@ -13,26 +13,50 @@ class MainSettingViewController: AVBaseViewController , UITabBarDelegate, CAPSPa
     @IBOutlet weak var tabBarView: UITabBar!
      var pageMenu: CAPSPageMenu?
     
+    @IBOutlet weak var serviceItem: UITabBarItem!
     @IBOutlet weak var diaryItem: UITabBarItem!
     @IBOutlet weak var journalItem: UITabBar!
     @IBOutlet weak var configureItem: UITabBarItem!
     @IBOutlet weak var historyImage: UITabBarItem!
     @IBOutlet weak var inforItem: UITabBarItem!
+    var blockHiddenRightItemNav: (()->Void)?
+    
+    struct StaticSetting {
+        static var instance: MainSettingViewController?
+    }
+    class var ShareInstance: MainSettingViewController {
+        if StaticSetting.instance == nil {
+            StaticSetting.instance = MainSettingViewController()
+        }
+        return StaticSetting.instance!
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tabBarView.delegate = self
         self.setUpTabBar()
         tabBarView.selectedItem = diaryItem
-        
+        StaticSetting.instance = self
         self.navigationController?.isNavigationBarHidden = false
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    override func clickRightButtom() {
+        if let block = blockHiddenRightItemNav {
+            block()
+        }
+    }
 
     func setUpTabBar() {
         
@@ -42,11 +66,12 @@ class MainSettingViewController: AVBaseViewController , UITabBarDelegate, CAPSPa
         let ConfigureItem = ConfigComputerViewController()
         let ThumbnailVC   = ThumbnailViewController()
         let InforVC       = InforComputerViewController()
-        
+        let postNewVC     = PostViewController()
 
         let controllerArray = [ AVBaseNavigationController(rootViewController: TimelineVC),
                                 AVBaseNavigationController(rootViewController: ConfigureItem),
                                 AVBaseNavigationController(rootViewController: ThumbnailVC),
+                                AVBaseNavigationController(rootViewController: postNewVC),
                                 AVBaseNavigationController(rootViewController: InforVC)
                                 ]
         let parameters: [CAPSPageMenuOption] = [
@@ -79,19 +104,36 @@ class MainSettingViewController: AVBaseViewController , UITabBarDelegate, CAPSPa
     }
     
     func didMoveToPage(_ controller: UIViewController, index: Int) {
+        
         switch index {
         case 0:
             tabBarView.selectedItem = diaryItem
+            MainSettingViewController.ShareInstance.navigationItem.rightBarButtonItem = nil
         case 1:
             tabBarView.selectedItem = configureItem
+            MainSettingViewController.ShareInstance.navigationItem.rightBarButtonItem = nil
         case 2:
             tabBarView.selectedItem = historyImage
-        default:
+            MainSettingViewController.ShareInstance.navigationItem.rightBarButtonItem = nil
+        case 3:
+            tabBarView.selectedItem = serviceItem
+                self.setRightBarIconParent()
+        case 4:
             tabBarView.selectedItem = inforItem
+            MainSettingViewController.ShareInstance.navigationItem.rightBarButtonItem = nil
+        default:
+            tabBarView.selectedItem = serviceItem
+            MainSettingViewController.ShareInstance.navigationItem.rightBarButtonItem = nil
         }
     }
     
     func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+
+        if item.tag == 3 {
+           self.setRightBarIconParent()
+        } else {
+           MainSettingViewController.ShareInstance.navigationItem.rightBarButtonItem = nil
+        }
         pageMenu?.moveToPage(item.tag)
     }
 

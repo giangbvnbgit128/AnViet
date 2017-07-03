@@ -42,15 +42,11 @@
 		533749DC1EDAC59D00312AA5 /* CAPSPageMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533749D51EDAC59D00312AA5 /* CAPSPageMenu.swift */; };
 		533749DD1EDAC59D00312AA5 /* CAPSPageMenuConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533749D61EDAC59D00312AA5 /* CAPSPageMenuConfiguration.swift */; };
 		533749DE1EDAC59D00312AA5 /* MenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533749D71EDAC59D00312AA5 /* MenuItemView.swift */; };
-		533C7E891EF1A1BC0009AE18 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533C7E871EF1A1BC0009AE18 /* PostViewController.swift */; };
-		533C7E8A1EF1A1BC0009AE18 /* PostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 533C7E881EF1A1BC0009AE18 /* PostViewController.xib */; };
 		533C7E941EF1A5810009AE18 /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 533C7E8D1EF1A5810009AE18 /* TPKeyboardAvoidingCollectionView.m */; };
 		533C7E951EF1A5810009AE18 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 533C7E8F1EF1A5810009AE18 /* TPKeyboardAvoidingScrollView.m */; };
 		533C7E961EF1A5810009AE18 /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 533C7E911EF1A5810009AE18 /* TPKeyboardAvoidingTableView.m */; };
 		533C7E971EF1A5810009AE18 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 533C7E931EF1A5810009AE18 /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
 		533C7E9A1EF1B0130009AE18 /* SKPhotoBrowser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53BFFE731EEEF91700C1DC09 /* SKPhotoBrowser.framework */; };
-		533C7EA51EF1BB260009AE18 /* AVImageChooseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533C7EA31EF1BB260009AE18 /* AVImageChooseCollectionViewCell.swift */; };
-		533C7EA61EF1BB260009AE18 /* AVImageChooseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 533C7EA41EF1BB260009AE18 /* AVImageChooseCollectionViewCell.xib */; };
 		533DF8171F040ADB0005EE89 /* MainSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533DF8151F040ADB0005EE89 /* MainSettingViewController.swift */; };
 		533DF8181F040ADB0005EE89 /* MainSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 533DF8161F040ADB0005EE89 /* MainSettingViewController.xib */; };
 		533DF81B1F040B620005EE89 /* ConfigComputerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533DF8191F040B620005EE89 /* ConfigComputerViewController.swift */; };
@@ -70,6 +66,12 @@
 		535BE7EF1ED5FA6500363A7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535BE7EE1ED5FA6500363A7B /* AppDelegate.swift */; };
 		535BE7F31ED5FAF500363A7B /* AVBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535BE7F21ED5FAF500363A7B /* AVBaseViewController.swift */; };
 		5360DC481F0A9DA60059B95A /* IQKeyboardManagerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5360DC471F0A9DA60059B95A /* IQKeyboardManagerSwift.framework */; };
+		5360DC4F1F0AB31D0059B95A /* AVImageChooseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5360DC4B1F0AB31D0059B95A /* AVImageChooseCollectionViewCell.swift */; };
+		5360DC501F0AB31D0059B95A /* AVImageChooseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5360DC4C1F0AB31D0059B95A /* AVImageChooseCollectionViewCell.xib */; };
+		5360DC511F0AB31D0059B95A /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5360DC4D1F0AB31D0059B95A /* PostViewController.swift */; };
+		5360DC521F0AB31D0059B95A /* PostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5360DC4E1F0AB31D0059B95A /* PostViewController.xib */; };
+		5360DC551F0ABE520059B95A /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5360DC531F0ABE520059B95A /* HeaderTableViewCell.swift */; };
+		5360DC561F0ABE520059B95A /* HeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5360DC541F0ABE520059B95A /* HeaderTableViewCell.xib */; };
 		5364E54D1ED73FDD005A8078 /* AVRegisterAccountRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5364E54C1ED73FDD005A8078 /* AVRegisterAccountRouter.swift */; };
 		53661B9A1EDA63B600BD01E4 /* AVHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53661B981EDA63B600BD01E4 /* AVHomeViewController.swift */; };
 		53661B9B1EDA63B600BD01E4 /* AVHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53661B991EDA63B600BD01E4 /* AVHomeViewController.xib */; };
@@ -216,8 +218,6 @@
 		533749D51EDAC59D00312AA5 /* CAPSPageMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAPSPageMenu.swift; sourceTree = "<group>"; };
 		533749D61EDAC59D00312AA5 /* CAPSPageMenuConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAPSPageMenuConfiguration.swift; sourceTree = "<group>"; };
 		533749D71EDAC59D00312AA5 /* MenuItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemView.swift; sourceTree = "<group>"; };
-		533C7E871EF1A1BC0009AE18 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
-		533C7E881EF1A1BC0009AE18 /* PostViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostViewController.xib; sourceTree = "<group>"; };
 		533C7E8C1EF1A5810009AE18 /* TPKeyboardAvoidingCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingCollectionView.h; sourceTree = "<group>"; };
 		533C7E8D1EF1A5810009AE18 /* TPKeyboardAvoidingCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingCollectionView.m; sourceTree = "<group>"; };
 		533C7E8E1EF1A5810009AE18 /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
@@ -228,8 +228,6 @@
 		533C7E931EF1A5810009AE18 /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
 		533C7E981EF1AFE90009AE18 /* MBFacebookImagePicker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBFacebookImagePicker.framework; path = "Pods/../build/Debug-iphoneos/MBFacebookImagePicker/MBFacebookImagePicker.framework"; sourceTree = "<group>"; };
 		533C7EA01EF1B0360009AE18 /* MBFacebookImagePicker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBFacebookImagePicker.framework; path = "Pods/../build/Debug-iphoneos/MBFacebookImagePicker/MBFacebookImagePicker.framework"; sourceTree = "<group>"; };
-		533C7EA31EF1BB260009AE18 /* AVImageChooseCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVImageChooseCollectionViewCell.swift; sourceTree = "<group>"; };
-		533C7EA41EF1BB260009AE18 /* AVImageChooseCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AVImageChooseCollectionViewCell.xib; sourceTree = "<group>"; };
 		533DF8151F040ADB0005EE89 /* MainSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSettingViewController.swift; sourceTree = "<group>"; };
 		533DF8161F040ADB0005EE89 /* MainSettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainSettingViewController.xib; sourceTree = "<group>"; };
 		533DF8191F040B620005EE89 /* ConfigComputerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigComputerViewController.swift; sourceTree = "<group>"; };
@@ -255,6 +253,12 @@
 		535BE7EE1ED5FA6500363A7B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		535BE7F21ED5FAF500363A7B /* AVBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVBaseViewController.swift; sourceTree = "<group>"; };
 		5360DC471F0A9DA60059B95A /* IQKeyboardManagerSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IQKeyboardManagerSwift.framework; path = "../Library/Developer/Xcode/DerivedData/AnViet-hfntttawgxmsmveeajnrfnjmghmu/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework"; sourceTree = "<group>"; };
+		5360DC4B1F0AB31D0059B95A /* AVImageChooseCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVImageChooseCollectionViewCell.swift; sourceTree = "<group>"; };
+		5360DC4C1F0AB31D0059B95A /* AVImageChooseCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AVImageChooseCollectionViewCell.xib; sourceTree = "<group>"; };
+		5360DC4D1F0AB31D0059B95A /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		5360DC4E1F0AB31D0059B95A /* PostViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostViewController.xib; sourceTree = "<group>"; };
+		5360DC531F0ABE520059B95A /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
+		5360DC541F0ABE520059B95A /* HeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderTableViewCell.xib; sourceTree = "<group>"; };
 		5364E54C1ED73FDD005A8078 /* AVRegisterAccountRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVRegisterAccountRouter.swift; sourceTree = "<group>"; };
 		53661B981EDA63B600BD01E4 /* AVHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVHomeViewController.swift; sourceTree = "<group>"; };
 		53661B991EDA63B600BD01E4 /* AVHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AVHomeViewController.xib; sourceTree = "<group>"; };
@@ -416,6 +420,7 @@
 		4B3FA95C1F03AD35004D0ED9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5360DC491F0AB31D0059B95A /* PostViewController */,
 				533DF8101F040AAF0005EE89 /* ConfigComputerViewController */,
 				533DF8111F040AAF0005EE89 /* InforComputerViewController */,
 				533DF8121F040AAF0005EE89 /* MainSettingViewController */,
@@ -487,16 +492,6 @@
 			path = PageMenu;
 			sourceTree = "<group>";
 		};
-		533C7E861EF1A1880009AE18 /* PostViewController */ = {
-			isa = PBXGroup;
-			children = (
-				533C7EA21EF1BB080009AE18 /* Cell */,
-				533C7E871EF1A1BC0009AE18 /* PostViewController.swift */,
-				533C7E881EF1A1BC0009AE18 /* PostViewController.xib */,
-			);
-			path = PostViewController;
-			sourceTree = "<group>";
-		};
 		533C7E8B1EF1A5810009AE18 /* TPKeyboardAvoiding */ = {
 			isa = PBXGroup;
 			children = (
@@ -510,15 +505,6 @@
 				533C7E931EF1A5810009AE18 /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
 			);
 			path = TPKeyboardAvoiding;
-			sourceTree = "<group>";
-		};
-		533C7EA21EF1BB080009AE18 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				533C7EA31EF1BB260009AE18 /* AVImageChooseCollectionViewCell.swift */,
-				533C7EA41EF1BB260009AE18 /* AVImageChooseCollectionViewCell.xib */,
-			);
-			path = Cell;
 			sourceTree = "<group>";
 		};
 		533DF8101F040AAF0005EE89 /* ConfigComputerViewController */ = {
@@ -701,7 +687,6 @@
 				538A21BE1F0754FE00C1BA1B /* AboutUSViewController */,
 				538A21B91F0746E300C1BA1B /* ChangePasswordViewController */,
 				538A21B21F06DD3300C1BA1B /* MissPassword */,
-				533C7E861EF1A1880009AE18 /* PostViewController */,
 				53661B941EDA639100BD01E4 /* HomeViewController */,
 				53661B951EDA639100BD01E4 /* NewViewController */,
 				53661B961EDA639100BD01E4 /* SettingPersonalViewController */,
@@ -712,6 +697,25 @@
 				53B20A4A1ED606BE00332200 /* TutorialViewController */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5360DC491F0AB31D0059B95A /* PostViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5360DC4A1F0AB31D0059B95A /* Cell */,
+				5360DC4D1F0AB31D0059B95A /* PostViewController.swift */,
+				5360DC4E1F0AB31D0059B95A /* PostViewController.xib */,
+			);
+			path = PostViewController;
+			sourceTree = "<group>";
+		};
+		5360DC4A1F0AB31D0059B95A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5360DC4B1F0AB31D0059B95A /* AVImageChooseCollectionViewCell.swift */,
+				5360DC4C1F0AB31D0059B95A /* AVImageChooseCollectionViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		5364E54E1ED75914005A8078 /* MainViewConTroller */ = {
@@ -804,6 +808,8 @@
 				538A21AB1F06C93100C1BA1B /* configTableViewCell.xib */,
 				538A21AE1F06C97800C1BA1B /* headerConfigTableViewCell.swift */,
 				538A21AF1F06C97800C1BA1B /* headerConfigTableViewCell.xib */,
+				5360DC531F0ABE520059B95A /* HeaderTableViewCell.swift */,
+				5360DC541F0ABE520059B95A /* HeaderTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -1081,6 +1087,7 @@
 			files = (
 				531261391EE9E64A0014D87B /* AVProrsonalTableViewCell.xib in Resources */,
 				538A21C21F07551900C1BA1B /* AVAboutUSViewController.xib in Resources */,
+				5360DC501F0AB31D0059B95A /* AVImageChooseCollectionViewCell.xib in Resources */,
 				4B0BD3EA1F063FAF0040CCA5 /* TimeLineHeaderTableViewCell.xib in Resources */,
 				538A21B61F06DD5300C1BA1B /* MissPasswordViewController.xib in Resources */,
 				538A21B11F06C97800C1BA1B /* headerConfigTableViewCell.xib in Resources */,
@@ -1093,13 +1100,12 @@
 				5312612F1EE9DAFC0014D87B /* AVHeaderNewsTableViewCell.xib in Resources */,
 				531261341EE9E2B60014D87B /* AVServiceCollectionViewCell.xib in Resources */,
 				53661BA71EDA63F800BD01E4 /* AVServiceViewController.xib in Resources */,
-				533C7EA61EF1BB260009AE18 /* AVImageChooseCollectionViewCell.xib in Resources */,
 				53B20A531ED6074200332200 /* AVTutorialCollectionViewCell.xib in Resources */,
 				53BA65301EDDCB020027A463 /* AVNewFeedFourImageTableViewCell.xib in Resources */,
 				53E4A3321EEDA5F3006D2307 /* AVNewFeedNoImageTableViewCell.xib in Resources */,
 				535BE7BE1ED5F92200363A7B /* LaunchScreen.storyboard in Resources */,
-				533C7E8A1EF1A1BC0009AE18 /* PostViewController.xib in Resources */,
 				53BA651C1EDDC8B20027A463 /* AVNewFeedTwoImageTableViewCell.xib in Resources */,
+				5360DC521F0AB31D0059B95A /* PostViewController.xib in Resources */,
 				53661BA31EDA63E400BD01E4 /* AVPersonalViewController.xib in Resources */,
 				533DF8241F040B8E0005EE89 /* ThumbnailViewController.xib in Resources */,
 				53661B9F1EDA63CF00BD01E4 /* AVNewsViewController.xib in Resources */,
@@ -1117,6 +1123,7 @@
 				533DF8281F040BA10005EE89 /* TimelineViewController.xib in Resources */,
 				538A21BD1F074DA300C1BA1B /* AVChangePasswordViewController.xib in Resources */,
 				536EE2E41ED72ECA00954E60 /* AVRegisterAccountAccountViewController.xib in Resources */,
+				5360DC561F0ABE520059B95A /* HeaderTableViewCell.xib in Resources */,
 				4B0BD3F61F0649C00040CCA5 /* TimeLineImageCollectionViewCell.xib in Resources */,
 				53BA65341EDDCB7D0027A463 /* AVNewFeedFiveImageTableViewCell.xib in Resources */,
 				4B0BD3F21F0646FD0040CCA5 /* TimeLineImageTableViewCell.xib in Resources */,
@@ -1193,7 +1200,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				533C7E891EF1A1BC0009AE18 /* PostViewController.swift in Sources */,
 				533749CD1EDABF9B00312AA5 /* AVMainViewController.swift in Sources */,
 				53B20A301ED6011900332200 /* NSDate.swift in Sources */,
 				53B20A2A1ED6011900332200 /* CGFloat.swift in Sources */,
@@ -1201,7 +1207,6 @@
 				53B20A611ED61C6D00332200 /* AVBaseNavigationController.swift in Sources */,
 				535BE7EF1ED5FA6500363A7B /* AppDelegate.swift in Sources */,
 				536C055E1EF81A0B0010AF77 /* ImageUpLoad.swift in Sources */,
-				533C7EA51EF1BB260009AE18 /* AVImageChooseCollectionViewCell.swift in Sources */,
 				533749D81EDAC59D00312AA5 /* CAPSPageMenu+Options.swift in Sources */,
 				53B20A291ED6011900332200 /* Array.swift in Sources */,
 				535BE7B61ED5F92200363A7B /* ViewController.swift in Sources */,
@@ -1227,6 +1232,7 @@
 				53B20A391ED6011900332200 /* UIColor.swift in Sources */,
 				53BA653C1EDDDCC10027A463 /* AVLoginRouter.swift in Sources */,
 				535BE7F31ED5FAF500363A7B /* AVBaseViewController.swift in Sources */,
+				5360DC4F1F0AB31D0059B95A /* AVImageChooseCollectionViewCell.swift in Sources */,
 				53B20A321ED6011900332200 /* NSObject.swift in Sources */,
 				53B20A401ED6011900332200 /* UIScreen.swift in Sources */,
 				538A21B01F06C97800C1BA1B /* headerConfigTableViewCell.swift in Sources */,
@@ -1248,6 +1254,7 @@
 				53B20A2C1ED6011900332200 /* Double.swift in Sources */,
 				538A21C11F07551900C1BA1B /* AVAboutUSViewController.swift in Sources */,
 				53B20A3F1ED6011900332200 /* UINavigationController.swift in Sources */,
+				5360DC511F0AB31D0059B95A /* PostViewController.swift in Sources */,
 				533749DE1EDAC59D00312AA5 /* MenuItemView.swift in Sources */,
 				53EE14201EE5DABA0089C2B1 /* AVNewsFeedRouter.swift in Sources */,
 				53F328D11EE874D500310B06 /* Defines.swift in Sources */,
@@ -1282,6 +1289,7 @@
 				533C7E971EF1A5810009AE18 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				538A21B51F06DD5300C1BA1B /* MissPasswordViewController.swift in Sources */,
 				53B20A371ED6011900332200 /* UIButton.swift in Sources */,
+				5360DC551F0ABE520059B95A /* HeaderTableViewCell.swift in Sources */,
 				538A21B81F07452800C1BA1B /* AVChangPassRouter.swift in Sources */,
 				53B20A441ED6011900332200 /* UIViewController.swift in Sources */,
 				536C05601EF8477D0010AF77 /* AVUploadRouter.swift in Sources */,

@@ -21,7 +21,6 @@ class InforComputerViewController: AVBaseViewController {
         tableView.dataSource = self
         self.tableView.registerCellNib(InforTableViewCell.self)
         self.tableView.registerCellNib(HeaderInforTableViewCell.self)
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {

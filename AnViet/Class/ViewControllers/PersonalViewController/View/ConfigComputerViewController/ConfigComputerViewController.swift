@@ -26,13 +26,19 @@ class ConfigComputerViewController: AVBaseViewController {
         tableView.dataSource = self
         self.tableView.registerCellNib(configTableViewCell.self)
         self.tableView.registerCellNib(headerConfigTableViewCell.self)
-        
+        self.tableView.registerCellNib(HeaderTableViewCell.self)
+        MainSettingViewController.ShareInstance.blockHiddenRightItemNav = {() in
+          MainSettingViewController.ShareInstance.navigationItem.rightBarButtonItem = nil
+        }
+       
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         self.tableView.reloadData()
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -43,30 +49,51 @@ class ConfigComputerViewController: AVBaseViewController {
 extension ConfigComputerViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return self.arrCategories.count
+        return self.arrCategories.count + 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.array[section].count
+        if section == 0 {
+            return 1
+        }
+        return self.array[section - 1].count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.section == 0 {
+            let cell = tableView.dequeue(HeaderTableViewCell.self)
+            return cell
+        }
         let cell = tableView.dequeue(configTableViewCell.self)
-        cell.configCell(title: self.array[indexPath.section][indexPath.row])
+        cell.configCell(title: self.array[indexPath.section - 1][indexPath.row])
         return cell
     }
 }
 extension ConfigComputerViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.section == 0 {
+            return 150
+        }
         return 40
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 35
+        if section == 0 {
+            return 0.001
+        } else {
+           return 35
+        }
+       
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 0.001
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let cell = tableView.dequeue(headerConfigTableViewCell.self)
-        cell.configCell(title: self.arrCategories[section])
+        if section != 0 {
+          cell.configCell(title: self.arrCategories[section - 1])
+        }
         return cell
     }
 }

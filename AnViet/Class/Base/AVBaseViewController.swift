@@ -18,7 +18,12 @@ class AVBaseViewController: UIViewController{
     func isHiddenNavigationBar(isHidden:Bool) {
         self.navigationController?.isNavigationBarHidden = isHidden
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+    }
     func showLoading() {
         ZKProgressHUD.show()
         ZKProgressHUD.setBackgroundColor(.white)
@@ -40,14 +45,15 @@ class AVBaseViewController: UIViewController{
     }
     // MARK: - Setup
     func setRightBarIconParent() {
-                let leftButton = UIButton(type: .custom)
-                leftButton.addTarget(self, action: #selector(self.clickRightButtom), for: .touchUpInside)
-                leftButton.frame = CGRect(x: 0, y: 0, width: 32, height: 32)
-                leftButton.setImage(UIImage(named: "top_add"), for: .normal)
-                leftButton.contentMode = .scaleAspectFit
-                let leftView = UIView(x: 0, y: 0, width: 32, height: 32)
-                leftView.addSubview(leftButton)
-                navigationItem.setRightBarButton(UIBarButtonItem(customView: leftView), animated: false)
+        let leftButton = UIButton(type: .custom)
+            leftButton.addTarget(self, action: #selector(self.clickRightButtom), for: .touchUpInside)
+            leftButton.frame = CGRect(x: 0, y: 0, width: 32, height: 32)
+            leftButton.setImage(UIImage(named: "top_add"), for: .normal)
+            leftButton.contentMode = .scaleAspectFit
+        let leftView = UIView(x: 0, y: 0, width: 32, height: 32)
+            leftView.addSubview(leftButton)
+            MainSettingViewController.ShareInstance.navigationItem.setRightBarButton(UIBarButtonItem(customView: leftView), animated: false)
+//                navigationItem.setRightBarButton(UIBarButtonItem(customView: leftView), animated: false)
         
     }
     

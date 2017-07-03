@@ -19,6 +19,9 @@ class TimelineViewController: AVBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
+        MainSettingViewController.ShareInstance.blockHiddenRightItemNav = {() in
+            MainSettingViewController.ShareInstance.navigationItem.rightBarButtonItem = nil
+        }
         let value:NSObject =  UserDefaults[.userInfor] as! NSObject
         let newValue = value as? [String : AnyObject]
         user = Mapper<UserInfor>().map(JSONObject: newValue)!

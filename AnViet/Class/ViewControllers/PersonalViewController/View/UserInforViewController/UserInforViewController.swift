@@ -26,6 +26,9 @@ class UserInforViewController: AVBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = false
+        MainSettingViewController.ShareInstance.blockHiddenRightItemNav = {() in
+            MainSettingViewController.ShareInstance.navigationItem.rightBarButtonItem = nil
+        }
         setUpData()
     }
     

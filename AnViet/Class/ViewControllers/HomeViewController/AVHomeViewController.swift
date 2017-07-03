@@ -14,7 +14,7 @@ class AVHomeViewController: AVBaseViewController {
 
 //    let heightForNoImage:CGFloat = 127
     
-    
+    var cacheId:String = "0"
     @IBOutlet weak var tableView: UITableView!
     
     var newsFeeds:NewsItem = NewsItem()
@@ -161,8 +161,12 @@ extension AVHomeViewController : UIScrollViewDelegate {
         if(y > (h + reload_distance)) {
            DispatchQueue.main.async(execute: {
             if self.newsFeeds.data.count > 0 {
-                print("========last Item = \(self.newsFeeds.data[self.newsFeeds.data.count - 1].post.id)")
-                self.getNewsFeed(userid: self.user.data.id, token: self.user.data.token, limit: "10", postid: self.newsFeeds.data[self.newsFeeds.data.count - 1].post.id, isloadMore: true)
+                let idIndex = self.newsFeeds.data[self.newsFeeds.data.count - 1].post.id
+                if self.cacheId != idIndex {
+                    self.cacheId = idIndex
+                    self.getNewsFeed(userid: self.user.data.id, token: self.user.data.token, limit: "10", postid: idIndex, isloadMore: true)
+                }
+
             }
            })
         }

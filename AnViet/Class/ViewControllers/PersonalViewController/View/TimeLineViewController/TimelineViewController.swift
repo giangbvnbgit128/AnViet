@@ -13,6 +13,7 @@ import ObjectMapper
 class TimelineViewController: AVBaseViewController {
     var timeLine:Timeline = Timeline()
     var user:UserInfor = UserInfor()
+    var cacheId:String = "0"
    
     @IBOutlet weak var tableview: UITableView!
     override func viewDidLoad() {
@@ -128,7 +129,12 @@ extension TimelineViewController : UIScrollViewDelegate {
         let reload_distance = CGFloat(10)
         if(y > (h + reload_distance)) {
             if self.timeLine.data.Post.count > 0 {
-             self.getListPost(UserID: user.data.id, token: user.data.token, limit: "10",postId: self.timeLine.data.Post[0].post_data[self.timeLine.data.Post[0].post_data.count - 1].id,isload: true)
+              let idIndex = self.timeLine.data.Post[0].post_data[self.timeLine.data.Post[0].post_data.count - 1].id
+                if self.cacheId != idIndex {
+                    self.cacheId = idIndex
+                  self.getListPost(UserID: user.data.id, token: user.data.token, limit: "10",postId: idIndex,isload: true)
+                }
+              
             }
 
         }

@@ -14,6 +14,8 @@ class UserInfor: Mappable{
     var host:String = ""
     var mess:String = ""
     var data:DataInfor = DataInfor()
+    private var data1:DataInfor?
+    private var data2:[DataInfor]?
     
     init() {
         
@@ -26,7 +28,14 @@ class UserInfor: Mappable{
        error <- map["error"]
         host <- map["host"]
         mess <- map["mess"]
-        data <- map["data"]
+        
+        data1 <- map["data"]
+        data2 <- map["data"]
+        if data1 != nil {
+            data = data1!
+        } else {
+            data = (data2?[0])!
+        }
     }
     
     

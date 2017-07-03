@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import ObjectMapper
+import IQKeyboardManagerSwift
 
 class AVRegisterAccountAccountViewController: AVBaseViewController {
 
@@ -35,6 +36,7 @@ class AVRegisterAccountAccountViewController: AVBaseViewController {
     @IBOutlet weak var tfModel: UITextField!
     @IBOutlet weak var imgErrorModel: UIImageView!
     
+    @IBOutlet weak var scrollView: UIScrollView!
     var userInfor:UserInfor = UserInfor()
     
     
@@ -67,6 +69,9 @@ class AVRegisterAccountAccountViewController: AVBaseViewController {
         
         btnRegis.layer.cornerRadius = 4
         
+        // config gor textfile
+        
+        
         
     }
     
@@ -81,7 +86,7 @@ class AVRegisterAccountAccountViewController: AVBaseViewController {
         let computerName = self.tfModel.text ?? ""
         let model = self.tfModel.text ?? ""
         let name = self.tfName.text ?? ""
-        self.requsetRegis(userName: usename, email: email, passWord: password, phone: phone, computerName: computerName, model: model, name: name)
+        self.requsetRegis(userName: usename.urlEncodeUTF8(), email: email.urlEncodeUTF8(), passWord: password, phone: phone.urlEncodeUTF8(), computerName: computerName.urlEncodeUTF8(), model: model.urlEncodeUTF8(), name: name.urlEncodeUTF8())
         
     }
     
@@ -147,11 +152,18 @@ class AVRegisterAccountAccountViewController: AVBaseViewController {
             switch response.result {
             case .success(let value):
                 let newValue = value as? [String : AnyObject]
+                UserDefaults[.userInfor] = value as! NSObject
                 self.userInfor = Mapper<UserInfor>().map(JSONObject: newValue)!
                 if self.userInfor.error.compare("FALSE") == .orderedSame {
+                    
+                    let value:NSObject =  UserDefaults[.userInfor] as! NSObject
+                    let newValue = value as? [String : AnyObject]
+                    let user = Mapper<UserInfor>().map(JSONObject: newValue)!
+                    
                     let tabbarVC = AVMainViewController()
-                    self.present(tabbarVC, animated: true, completion: {
-                    })
+                    let anvVC = AVBaseNavigationController(rootViewController: tabbarVC)
+                    appDelegate.window?.rootViewController = anvVC
+                    appDelegate.window?.makeKeyAndVisible()
                 } else {
                     self.showAler(message: self.userInfor.mess, title: "")
                 }
@@ -165,6 +177,12 @@ class AVRegisterAccountAccountViewController: AVBaseViewController {
 extension AVRegisterAccountAccountViewController: UITextFieldDelegate {
 
     public func textFieldDidBeginEditing(_ textField: UITextField) {    
+        switch textField {
+        case self.tfAgaintPass:
+            self.scrollView.setContentOffset(CGPoint( x: 0, y: self.tfNumberPhone.frame.height * 2), animated: true)
+        default:
+            break
+        }
     }
     
     public func textFieldDidEndEditing(_ textField: UITextField) {
@@ -173,7 +191,7 @@ extension AVRegisterAccountAccountViewController: UITextFieldDelegate {
             if self.tfName.text == nil {
                 self.tfName.text = ""
             }
-            self.imgErrorName.isHidden = (self.tfName.text?.trimmingCharacters(in: .whitespaces).validate(.name(from: 4, to: 16)))!
+            self.imgErrorName.isHidden = (self.tfName.text?.trimmingCharacters(in: .whitespaces).validate(.alphabetCharatersOnly(from: 4, to: 16)))!
             break
         case self.tfPassWord:
             if (self.tfPassWord.text == nil) {

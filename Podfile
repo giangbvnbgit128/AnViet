@@ -8,6 +8,7 @@ target 'AnViet' do
   pod 'SKPhotoBrowser'
   pod 'DKImagePickerController'
   pod 'ZKProgressHUD'
+  pod 'IQKeyboardManagerSwift'
 end
 post_install do |installer|
     installer.pods_project.targets.each do |target|

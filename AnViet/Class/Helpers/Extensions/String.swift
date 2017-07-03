@@ -270,6 +270,10 @@ public extension String {
         return String(format: "%02d", input)
     }
     
+    func urlEncodeUTF8() -> String{
+      return  self.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? ""
+    }
+    
     func md5() -> String! {
         let str = self.cString(using: String.Encoding.utf8)
         let strLen = CUnsignedInt(self.lengthOfBytes(using: String.Encoding.utf8))

@@ -21,6 +21,8 @@
 		4B3FA9651F03AE6F004D0ED9 /* UserInforViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3FA9631F03AE6F004D0ED9 /* UserInforViewController.swift */; };
 		4B3FA9661F03AE6F004D0ED9 /* UserInforViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B3FA9641F03AE6F004D0ED9 /* UserInforViewController.xib */; };
 		4B3FA9681F03B49E004D0ED9 /* AVUserInforSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3FA9671F03B49E004D0ED9 /* AVUserInforSetting.swift */; };
+		4BBED4511F0A00BD002D23FC /* IQKeyboardManagerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BBED44F1F0A0028002D23FC /* IQKeyboardManagerSwift.framework */; };
+		4BBED4521F0A00BD002D23FC /* IQKeyboardManagerSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4BBED44F1F0A0028002D23FC /* IQKeyboardManagerSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5306F9EC1EECDD60000C9EEF /* AVNewsPostRoutuer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5306F9EB1EECDD60000C9EEF /* AVNewsPostRoutuer.swift */; };
 		5312612A1EE9D5170014D87B /* AVNewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531261281EE9D5170014D87B /* AVNewsTableViewCell.swift */; };
 		5312612B1EE9D5170014D87B /* AVNewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 531261291EE9D5170014D87B /* AVNewsTableViewCell.xib */; };
@@ -183,6 +185,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				4BBED4521F0A00BD002D23FC /* IQKeyboardManagerSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,6 +208,7 @@
 		4B3FA9631F03AE6F004D0ED9 /* UserInforViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInforViewController.swift; sourceTree = "<group>"; };
 		4B3FA9641F03AE6F004D0ED9 /* UserInforViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserInforViewController.xib; sourceTree = "<group>"; };
 		4B3FA9671F03B49E004D0ED9 /* AVUserInforSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVUserInforSetting.swift; sourceTree = "<group>"; };
+		4BBED44F1F0A0028002D23FC /* IQKeyboardManagerSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IQKeyboardManagerSwift.framework; path = "../Library/Developer/Xcode/DerivedData/AnViet-gjyarszxphakrzdqxigfgbhnfbth/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework"; sourceTree = "<group>"; };
 		5306F9EB1EECDD60000C9EEF /* AVNewsPostRoutuer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVNewsPostRoutuer.swift; sourceTree = "<group>"; };
 		531261281EE9D5170014D87B /* AVNewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVNewsTableViewCell.swift; sourceTree = "<group>"; };
 		531261291EE9D5170014D87B /* AVNewsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AVNewsTableViewCell.xib; sourceTree = "<group>"; };
@@ -368,6 +372,7 @@
 				5320B49B1F0164930059FAAE /* DKImagePickerController.framework in Frameworks */,
 				536C05641EF8566C0010AF77 /* ZKProgressHUD.framework in Frameworks */,
 				533C7E9A1EF1B0130009AE18 /* SKPhotoBrowser.framework in Frameworks */,
+				4BBED4511F0A00BD002D23FC /* IQKeyboardManagerSwift.framework in Frameworks */,
 				3B12AF491C3FDCF978078B0F /* Pods_AnViet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -392,6 +397,7 @@
 		1B21D1BD2E55FE05CC479D44 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4BBED44F1F0A0028002D23FC /* IQKeyboardManagerSwift.framework */,
 				5320B49A1F0164930059FAAE /* DKImagePickerController.framework */,
 				5320B4981F0148D90059FAAE /* DKImagePickerController.framework */,
 				536C05631EF8566C0010AF77 /* ZKProgressHUD.framework */,
@@ -1176,7 +1182,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		6FCFF3566F63D6C84864C89F /* [CP] Embed Pods Frameworks */ = {

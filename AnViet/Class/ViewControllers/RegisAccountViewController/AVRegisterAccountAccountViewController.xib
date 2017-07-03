@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -20,6 +19,7 @@
                 <outlet property="imgErrorName" destination="2h9-g5-LWP" id="pWk-YO-6jU"/>
                 <outlet property="imgErrorNumberPhone" destination="wEb-EB-9WY" id="BHd-3n-319"/>
                 <outlet property="imgErrorPass" destination="xf1-3e-Q1Z" id="oCN-E2-gaz"/>
+                <outlet property="scrollView" destination="tOU-7E-X0m" id="vvY-wd-d5D"/>
                 <outlet property="tfAgaintPass" destination="U3T-JK-YNp" id="Xt5-Z7-L0J"/>
                 <outlet property="tfEmail" destination="jER-bu-15u" id="3w5-YP-pLx"/>
                 <outlet property="tfForLatop" destination="BlE-bm-IyB" id="wcP-uR-gm9"/>
@@ -36,7 +36,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tOU-7E-X0m">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tOU-7E-X0m">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6qj-YD-43f">
@@ -415,12 +415,12 @@
                                     </constraints>
                                     <variation key="default">
                                         <mask key="constraints">
-                                            <exclude reference="At3-9E-kg3"/>
                                             <exclude reference="gAX-We-Ce4"/>
                                             <exclude reference="P8f-II-quV"/>
                                             <exclude reference="pk2-iT-snj"/>
                                             <exclude reference="2iQ-LJ-qBY"/>
                                             <exclude reference="K3s-Zc-DpA"/>
+                                            <exclude reference="At3-9E-kg3"/>
                                         </mask>
                                     </variation>
                                 </view>

@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 import ObjectMapper
-import IQKeyboardManagerSwift
+//import IQKeyboardManagerSwift
 
 class AVRegisterAccountAccountViewController: AVBaseViewController {
 

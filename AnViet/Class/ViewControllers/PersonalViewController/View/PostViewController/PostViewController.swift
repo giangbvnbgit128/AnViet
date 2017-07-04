@@ -80,8 +80,8 @@ class PostViewController: AVBaseViewController {
             }
             
         }
-
-        self.present(pickerController, animated: true) {}
+        appDelegate.window?.visibleViewController()?.present(pickerController, animated: true, completion: nil)
+//        self.present(pickerController, animated: true) {}
     }
 
 // MARK: - Send Post News
@@ -225,8 +225,11 @@ extension PostViewController: UICollectionViewDataSource,UICollectionViewDelegat
         let cell = collectionView.dequeue(AVImageChooseCollectionViewCell.self, forIndexPath: indexPath)
         cell?.configCell(image: arrImage[indexPath.row])
         cell!.clickDeleteImageBlock = {() in
-            self.assets?.remove(at: indexPath.row)
-            self.collectionView.reloadData()
+            DispatchQueue.main.async {
+                self.arrImage.remove(at: indexPath.row)
+                self.collectionView.reloadData()
+            }
+
         }
         return cell!
     }

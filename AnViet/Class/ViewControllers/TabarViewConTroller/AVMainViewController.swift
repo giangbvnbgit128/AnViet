@@ -41,10 +41,6 @@ class AVMainViewController: UIViewController, UITabBarDelegate, CAPSPageMenuDele
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
          self.navigationController?.isNavigationBarHidden = true
-        
-        if let block = blockReloadData {
-            block()
-        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -97,6 +93,9 @@ class AVMainViewController: UIViewController, UITabBarDelegate, CAPSPageMenuDele
         switch index {
         case 0:
             tabBarView.selectedItem = homeItem
+            if let block = blockReloadData {
+                block()
+            }
         case 1:
             tabBarView.selectedItem = newsItem
         case 2:
@@ -107,6 +106,11 @@ class AVMainViewController: UIViewController, UITabBarDelegate, CAPSPageMenuDele
     }
 
     func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        if item.tag == 0 {
+            if let block = blockReloadData {
+                block()
+            }
+        }
          pageMenu?.moveToPage(item.tag)
     }
     

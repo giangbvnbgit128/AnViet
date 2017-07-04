@@ -33,6 +33,8 @@ class TimelineViewController: AVBaseViewController {
         self.tableview.registerCellNib(TimeLineHeaderTableViewCell.self)
         self.tableview.registerCellNib(TimeLineImageTableViewCell.self)
         
+        self.tableview.separatorStyle = .none
+        
         self.getListPost(UserID: user.data.id, token: user.data.token, limit: "10",postId: "0",isload: false)
     }
 

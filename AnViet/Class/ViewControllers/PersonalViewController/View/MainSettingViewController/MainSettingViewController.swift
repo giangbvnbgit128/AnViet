@@ -33,9 +33,8 @@ class MainSettingViewController: AVBaseViewController , UITabBarDelegate, CAPSPa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        tabBarView.delegate = self
         self.setUpTabBar()
+        tabBarView.delegate = self
         tabBarView.selectedItem = diaryItem
         StaticSetting.instance = self
         self.navigationController?.isNavigationBarHidden = false
@@ -53,9 +52,7 @@ class MainSettingViewController: AVBaseViewController , UITabBarDelegate, CAPSPa
     }
     
     override func clickRightButtom() {
-        if let block = blockHiddenRightItemNav {
-            block()
-        }
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "postNews"), object: nil)
     }
 
     func setUpTabBar() {
@@ -67,6 +64,7 @@ class MainSettingViewController: AVBaseViewController , UITabBarDelegate, CAPSPa
         let ThumbnailVC   = ThumbnailViewController()
         let InforVC       = InforComputerViewController()
         let postNewVC     = PostViewController()
+        postNewVC.parentVC = self
 
         let controllerArray = [ AVBaseNavigationController(rootViewController: TimelineVC),
                                 AVBaseNavigationController(rootViewController: ConfigureItem),
@@ -109,21 +107,27 @@ class MainSettingViewController: AVBaseViewController , UITabBarDelegate, CAPSPa
         case 0:
             tabBarView.selectedItem = diaryItem
             MainSettingViewController.ShareInstance.navigationItem.rightBarButtonItem = nil
+            break
         case 1:
             tabBarView.selectedItem = configureItem
             MainSettingViewController.ShareInstance.navigationItem.rightBarButtonItem = nil
+            break
         case 2:
             tabBarView.selectedItem = historyImage
             MainSettingViewController.ShareInstance.navigationItem.rightBarButtonItem = nil
+            break
         case 3:
             tabBarView.selectedItem = serviceItem
                 self.setRightBarIconParent()
+            break
         case 4:
             tabBarView.selectedItem = inforItem
             MainSettingViewController.ShareInstance.navigationItem.rightBarButtonItem = nil
+            break
         default:
             tabBarView.selectedItem = serviceItem
             MainSettingViewController.ShareInstance.navigationItem.rightBarButtonItem = nil
+            break
         }
     }
     

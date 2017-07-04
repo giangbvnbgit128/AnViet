@@ -12,6 +12,8 @@ import Alamofire
 import ObjectMapper
 
 
+
+
 class PostViewController: AVBaseViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var txtContent: UITextView!
@@ -22,25 +24,21 @@ class PostViewController: AVBaseViewController {
     var imageUploadData:ImageUpload = ImageUpload()
     var arrayImageJSON:[DataImageUpload] = []
     var user:UserInfor = UserInfor()
+    var parentVC: MainSettingViewController?
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.registerNib(AVImageChooseCollectionViewCell.self)
         
-        self.navigationController?.isNavigationBarHidden = false
+        self.navigationController?.isNavigationBarHidden = true
         // setup textView
         self.txtContent.layer.borderWidth = 1
         self.txtContent.layer.borderColor = UIColor.black.cgColor
-//        self.navigationController?.isNavigationBarHidden = true
-    
+        NotificationCenter.default.addObserver(self, selector: #selector(self.postAllNews), name: NSNotification.Name(rawValue: "postNews"), object: nil)
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        MainSettingViewController.ShareInstance.blockHiddenRightItemNav = {() in
-            self.postAllNews()
-        }
-        
     }
 
     override func viewWillDisappear(_ animated: Bool) {

@@ -112,10 +112,10 @@ extension TimelineViewController: UITableViewDataSource {
         if self.timeLine.data.Post.count > 0 {
             if self.timeLine.data.Post[0].post_data[indexPath.row].image.count > 0 {
                 let cell = tableView.dequeue(TimeLineImageTableViewCell.self)
-                cell.configCell(title: self.timeLine.data.Post[0].post_data[indexPath.row].title, arrImage: self.timeLine.data.Post[0].post_data[indexPath.row].image,host: self.timeLine.host)
+                cell.configCell(title: self.timeLine.data.Post[0].post_data[indexPath.row].content, arrImage: self.timeLine.data.Post[0].post_data[indexPath.row].image,host: self.timeLine.host)
                 return cell
             }
-            cell.configCell(title:  self.timeLine.data.Post[0].post_data[indexPath.row].title)
+            cell.configCell(title:  self.timeLine.data.Post[0].post_data[indexPath.row].content)
         }
         
         return cell

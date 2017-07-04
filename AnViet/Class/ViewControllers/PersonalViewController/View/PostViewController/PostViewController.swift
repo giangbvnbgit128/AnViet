@@ -172,9 +172,9 @@ class PostViewController: AVBaseViewController {
                 multipartFormData.append(image, withName: "image", fileName: "swift_file.jpeg", mimeType: "image/jpeg")
             }
 
-            for (key, value) in parameters {
-                multipartFormData.append(value.data(using: String.Encoding.utf8)!, withName: key)
-            }
+//            for (key, value) in parameters {
+//                multipartFormData.append(value.data(using: String.Encoding.utf8)!, withName: key)
+//            }
         }, to: AVUploadRouter( endpoint: .UploadImage).getUrl())
         { (result) in
             switch result {

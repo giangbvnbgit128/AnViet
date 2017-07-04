@@ -92,8 +92,8 @@ class PostViewController: AVBaseViewController {
         }
         var arrayImageData:[Data] = []
         for i in 0..<arrImage.count {
-            arrayImageData.append(UIImagePNGRepresentation(arrImage[i])!)
-            
+            arrayImageData.append(UIImageJPEGRepresentation(arrImage[i], 0.5)!)//UIImagePNGRepresentation(arrImage[i])!
+
         }
         
         var params = [String:AnyObject]()
@@ -104,15 +104,24 @@ class PostViewController: AVBaseViewController {
         for i in 0..<arrayImageData.count {
             
             DispatchQueue.global().async {
-                self.upLoadImage(image: arrayImageData[i], complete: {
-                    self.countImageLoadFinish += 1
-                    if self.countImageLoadFinish == arrayImageData.count {
-                        let strImage:String = self.formatJsonForUpload(arrayImage: self.arrayImageJSON)
-                        self.postNews(image: strImage, content: content, complete: {
-                            self.stopLoading()
-                        })
-                        
-                        
+//                self.upLoadImageVersion2(image: arrayImageData[i], complete: { 
+//                    print("====")
+//                })
+                self.upLoadImage(image: arrayImageData[i], complete: {rs in
+                    if rs {
+                        self.countImageLoadFinish += 1
+                        if self.countImageLoadFinish == arrayImageData.count {
+                            let strImage:String = self.formatJsonForUpload(arrayImage: self.arrayImageJSON)
+                            self.postNews(image: strImage, content: content, complete: {
+                                self.stopLoading()
+                                self.arrImage.removeAll()
+                            })
+                            
+                            
+                        }
+
+                    } else {
+                        self.showAler(message: "Error", title: "Lỗi upload Server")
                     }
                 })
             }
@@ -138,7 +147,8 @@ class PostViewController: AVBaseViewController {
                 let newValue = value as? [String : AnyObject]
                 let newsPost:NewsUpload = Mapper<NewsUpload>().map(JSONObject: newValue)!
                 if newsPost.error.compare("FALSE") == .orderedSame {
-                     self.navigationController?.popViewController(animated: true)
+//                     self.navigationController?.popViewController(animated: true)
+                    AVMainViewController.ShareInstance.navigationController?.popViewController(animated: true)
                 } else {
                     self.showAler(message: newsPost.message, title: "Error")
                 }
@@ -162,7 +172,7 @@ class PostViewController: AVBaseViewController {
             return str
         }
     
-    func upLoadImage(image:Data,complete: @escaping() -> Void) {
+    func upLoadImage(image:Data,complete: @escaping(Bool) -> Void) {
         self.showLoading()
         let parameters = [
             "image": "swift_file.jpeg"
@@ -171,10 +181,9 @@ class PostViewController: AVBaseViewController {
             for _ in 0..<self.arrImage.count {
                 multipartFormData.append(image, withName: "image", fileName: "swift_file.jpeg", mimeType: "image/jpeg")
             }
-
-//            for (key, value) in parameters {
-//                multipartFormData.append(value.data(using: String.Encoding.utf8)!, withName: key)
-//            }
+            for (key, value) in parameters {
+                multipartFormData.append(value.data(using: String.Encoding.utf8)!, withName: key)
+            }
         }, to: AVUploadRouter( endpoint: .UploadImage).getUrl())
         { (result) in
             switch result {
@@ -187,19 +196,17 @@ class PostViewController: AVBaseViewController {
                 upload.responseJSON { response in
                     switch response.result {
                     case .success(let value):
-                        
                         let newValue = value as? [String : AnyObject]
                         self.imageUploadData = Mapper<ImageUpload>().map(JSONObject: newValue)!
                         if self.imageUploadData.error.compare("FALSE") == .orderedSame {
                             self.arrayImageJSON.append(self.imageUploadData.data)
-                            complete()
+                            complete(true)
                         } else {
                             self.showAler(message: self.imageUploadData.message, title: "Error")
-                            complete()
+                            complete(false)
                         }
-                        
                     case .failure(let _):
-                        complete()
+                        complete(false)
                         break
                     }
                 }

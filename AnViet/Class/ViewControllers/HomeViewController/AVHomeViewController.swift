@@ -90,14 +90,6 @@ class AVHomeViewController: AVBaseViewController {
    
     }
     
-//MARK: POST News
-    
-    @IBAction func actionPost(_ sender: AnyObject) {
-        let postVC = PostViewController()
-        
-        AVMainViewController.ShareInstance.navigationController?.pushViewController(postVC, animated: true)
-    }
-    
 }
 extension AVHomeViewController: UITableViewDelegate {
 

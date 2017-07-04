@@ -81,14 +81,9 @@ class PostViewController: AVBaseViewController {
             
         }
         appDelegate.window?.visibleViewController()?.present(pickerController, animated: true, completion: nil)
-//        self.present(pickerController, animated: true) {}
     }
 
 // MARK: - Send Post News
-    override func clickRightButtom() {
-        
-    }
-    
     func postAllNews() {
         let content = self.txtContent.text ?? ""
         if content.characters.count == 0 {
@@ -108,7 +103,7 @@ class PostViewController: AVBaseViewController {
         
         for i in 0..<arrayImageData.count {
             
-            DispatchQueue.main.async {
+            DispatchQueue.global().async {
                 self.upLoadImage(image: arrayImageData[i], complete: {
                     self.countImageLoadFinish += 1
                     if self.countImageLoadFinish == arrayImageData.count {
@@ -173,7 +168,7 @@ class PostViewController: AVBaseViewController {
             "image": "swift_file.jpeg"
         ]
         Alamofire.upload(multipartFormData: { (multipartFormData) in
-            for i in 0..<self.arrImage.count {
+            for _ in 0..<self.arrImage.count {
                 multipartFormData.append(image, withName: "image", fileName: "swift_file.jpeg", mimeType: "image/jpeg")
             }
 
@@ -186,7 +181,7 @@ class PostViewController: AVBaseViewController {
             case .success(let upload, _, _):
                 
                 upload.uploadProgress(closure: { (progress) in
-
+                    print("==========progress \(progress)")
                 })
                 
                 upload.responseJSON { response in
@@ -196,7 +191,6 @@ class PostViewController: AVBaseViewController {
                         let newValue = value as? [String : AnyObject]
                         self.imageUploadData = Mapper<ImageUpload>().map(JSONObject: newValue)!
                         if self.imageUploadData.error.compare("FALSE") == .orderedSame {
-                            print("==== Image \(self.imageUploadData.data.imageId)")
                             self.arrayImageJSON.append(self.imageUploadData.data)
                             complete()
                         } else {
@@ -204,7 +198,7 @@ class PostViewController: AVBaseViewController {
                             complete()
                         }
                         
-                    case .failure(let err):
+                    case .failure(let _):
                         complete()
                         break
                     }

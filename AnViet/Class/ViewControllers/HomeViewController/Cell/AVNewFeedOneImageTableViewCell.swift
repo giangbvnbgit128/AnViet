@@ -32,10 +32,11 @@ class AVNewFeedOneImageTableViewCell: AVBaseNewFeedTableViewCell {
     }
     
     func tapImg1() {
-        let browser = SKPhotoBrowser(photos: images)
-        let b = SKPhotoBrowser()
-        browser.initializePageIndex(0)
-        self.supperViewVC?.present(browser, animated: true, completion: {})
+        if images.count > 0 {
+            let browser = SKPhotoBrowser(photos: images)
+            browser.initializePageIndex(0)
+            self.supperViewVC?.present(browser, animated: true, completion: {})
+        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

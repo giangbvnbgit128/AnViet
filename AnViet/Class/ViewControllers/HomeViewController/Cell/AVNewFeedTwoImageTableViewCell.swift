@@ -40,15 +40,19 @@ class AVNewFeedTwoImageTableViewCell: AVBaseNewFeedTableViewCell {
 
     }
     func tapImg1() {
-        let browser = SKPhotoBrowser(photos: images)
-        browser.initializePageIndex(0)
-        self.supperViewVC?.present(browser, animated: true, completion: {})
+        if images.count >= 1 {
+            let browser = SKPhotoBrowser(photos: images)
+            browser.initializePageIndex(0)
+            self.supperViewVC?.present(browser, animated: true, completion: {})
+        }
     }
     
     func tapImg2() {
-        let browser = SKPhotoBrowser(photos: images)
-        browser.initializePageIndex(1)
-        self.supperViewVC?.present(browser, animated: true, completion: {})
+        if images.count >= 2 {
+            let browser = SKPhotoBrowser(photos: images)
+            browser.initializePageIndex(1)
+            self.supperViewVC?.present(browser, animated: true, completion: {})
+        }
     }
     
     override func configCell(data: DataForItem, host: String, vc: UIViewController) {

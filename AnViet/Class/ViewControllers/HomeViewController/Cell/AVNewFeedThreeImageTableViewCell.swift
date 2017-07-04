@@ -39,21 +39,28 @@ class AVNewFeedThreeImageTableViewCell: AVBaseNewFeedTableViewCell {
     }
     
     func tapImg1() {
-        let browser = SKPhotoBrowser(photos: images)
-        browser.initializePageIndex(0)
-        self.supperViewVC?.present(browser, animated: true, completion: {})
+        if images.count > 0 {
+            let browser = SKPhotoBrowser(photos: images)
+            browser.initializePageIndex(0)
+            self.supperViewVC?.present(browser, animated: true, completion: {})
+        }
     }
     
     func tapImg2() {
-        let browser = SKPhotoBrowser(photos: images)
-        browser.initializePageIndex(1)
-        self.supperViewVC?.present(browser, animated: true, completion: {})
+        if images.count > 1 {
+            let browser = SKPhotoBrowser(photos: images)
+            browser.initializePageIndex(1)
+            self.supperViewVC?.present(browser, animated: true, completion: {})
+        }
+
     }
     
     func tapImg3() {
-        let browser = SKPhotoBrowser(photos: images)
-        browser.initializePageIndex(2)
-        self.supperViewVC?.present(browser, animated: true, completion: {})
+        if images.count > 2 {
+            let browser = SKPhotoBrowser(photos: images)
+            browser.initializePageIndex(2)
+            self.supperViewVC?.present(browser, animated: true, completion: {})
+        }
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

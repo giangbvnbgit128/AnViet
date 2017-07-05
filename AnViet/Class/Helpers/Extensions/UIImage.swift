@@ -221,4 +221,124 @@ public extension UIImage {
         UIGraphicsEndImageContext()
         return outputImage
     }
+    
+    func resize(size: CGSize) -> UIImage {
+        let widthRatio = size.width / self.size.width
+        let heightRatio = size.height / self.size.height
+        let ratio = (widthRatio < heightRatio) ? widthRatio : heightRatio
+        let resizedSize = CGSize(width: (self.size.width * ratio), height: (self.size.height * ratio))
+        UIGraphicsBeginImageContext(resizedSize)
+        draw(in: CGRect(x: 0, y: 0, width: resizedSize.width, height: resizedSize.height))
+        let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        //print("width::\(size.width)  self.size.width::\(self.size.width)   height::\(size.height)  self.size.height::\(self.size.height)  resizedSize.width::\(resizedSize.width)  resizedSize.height::\(resizedSize.height)")
+        return resizedImage!
+    }
+    
+    func resizeH(height: CGFloat) -> UIImage {
+        let heightRatio = height / self.size.height
+        let resizedSize = CGSize(width: (self.size.width * heightRatio), height:height)
+        UIGraphicsBeginImageContext(resizedSize)
+        draw(in: CGRect(x: 0, y: 0, width: resizedSize.width, height: resizedSize.height))
+        let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return resizedImage!
+    }
+    
+    //================================================= resizeHeight
+    func resizeHeight(height: CGFloat) -> UIImage {
+        let origRef = self.cgImage
+        let origHeight = CGFloat(origRef!.height)
+        let origWidth = CGFloat(origRef!.width)
+        
+        let heightRatio = height / origHeight
+        let resizedSize = CGSize(width: (origWidth * heightRatio), height:height)
+        UIGraphicsBeginImageContext(resizedSize)
+        draw(in: CGRect(x: 0, y: 0, width: resizedSize.width, height: resizedSize.height))
+        let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return resizedImage!
+    }
+    
+    //
+    func resizeSquare(size: CGSize) -> UIImage {
+        
+        let widthRatio = size.width / self.size.width
+        let heightRatio = size.height / self.size.height
+        //print("width::\(self.size.width)  height::\(self.size.height)  w::\(size.width)  h::\(size.height)  widthRatio::\(widthRatio)  heightRatio::\(heightRatio)")
+        let ratio = (widthRatio > heightRatio) ? widthRatio : heightRatio
+        //print("ratio::\(ratio)  width::\(self.size.width * ratio)  height::\(self.size.height * ratio)")
+        let resizedSize = CGSize(width: (self.size.width * ratio), height: (self.size.height * ratio))
+        //print("resizedSize::\(resizedSize)")
+        UIGraphicsBeginImageContext(resizedSize)
+        draw(in: CGRect(x: 0, y: 0, width: resizedSize.width, height: resizedSize.height))
+        var resizedImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        let poisionY = (resizedSize.height - size.height)*0.5
+        let cropRect = CGRect(x: (resizedSize.width - size.width)*0.5, y: poisionY, width: size.width, height: size.height)
+        let cropCGImageRef = (resizedImage?.cgImage)?.cropping(to: cropRect)
+        resizedImage = UIImage(cgImage: cropCGImageRef!)
+        
+        //print("cropCGImageRef::\(cropCGImageRef)")
+        //print("resizedImage::\(resizedImage)")
+        
+        return resizedImage!
+    }
+    
+    func resizeAndCut(size: CGSize) -> UIImage {
+        
+        let widthRatio = size.width / self.size.width
+        let heightRatio = size.height / self.size.height
+        //print("width::\(self.size.width)  height::\(self.size.height)  widthRatio::\(widthRatio)  heightRatio::\(heightRatio)")
+        //let ratio = (widthRatio > heightRatio) ? widthRatio : heightRatio
+        
+        let ratio = (widthRatio > heightRatio) ? widthRatio : heightRatio
+        
+        let resizedSize = CGSize(width: (self.size.width * ratio), height: (self.size.height * ratio))
+        UIGraphicsBeginImageContext(resizedSize)
+        draw(in: CGRect(x: 0, y: 0, width: resizedSize.width, height: resizedSize.height))
+        var resizedImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        if(resizedSize.height>size.height || resizedSize.width>size.width) {
+            let cropRect = CGRect(x: (resizedSize.width-size.width)*0.5, y: (resizedSize.height-size.height)*0.5, width: size.width, height: size.height)
+            let cropCGImageRef = (resizedImage?.cgImage)?.cropping(to: cropRect)
+            resizedImage = UIImage(cgImage: cropCGImageRef!)
+        }
+        
+        return resizedImage!
+    }
+    
+    func resizeRatio(ratio: CGFloat) -> UIImage {
+        let resizedSize = CGSize(width: Int(self.size.width * ratio), height: Int(self.size.height * ratio))
+        UIGraphicsBeginImageContext(resizedSize)
+        draw(in: CGRect(x: 0, y: 0, width: resizedSize.width, height: resizedSize.height))
+        let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return resizedImage!
+    }
+    
+    func setSize(size: CGSize) -> UIImage {
+        let resizedSize = CGSize(width:size.width, height:size.height)
+        UIGraphicsBeginImageContext(resizedSize)
+        draw(in: CGRect(x: 0, y: 0, width: resizedSize.width, height: resizedSize.height))
+        let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return resizedImage!
+    }
+    
+    func alp(alp:CGFloat) -> UIImage {
+        let drawRect = CGRect(x: 0, y: 0, width: self.size.width, height: self.size.height)
+        UIGraphicsBeginImageContextWithOptions(self.size,false,0)
+        draw(in: drawRect, blendMode:.difference, alpha: alp)
+        let blendedImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return blendedImage!
+    }
+    
 }

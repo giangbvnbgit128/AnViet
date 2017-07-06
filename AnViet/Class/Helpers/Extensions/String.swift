@@ -292,4 +292,22 @@ public extension String {
         
         return String(format: hash as String)
     }
+    
+    func convertStringToDate() {
+        let dateString = "2017-07-06 15:37:24"
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        dateFormatter.locale = Locale.init(identifier: "en_US_POSIX")
+        
+        let dateObj = dateFormatter.date(from: dateString)
+        let date = Date()
+        let calendar = Calendar.current
+        
+        let year = calendar.component(.year, from: date)
+        let month = calendar.component(.month, from: date)
+        let day = calendar.component(.day, from: date)
+        
+        let year1 = calendar.component(.hour, from: dateObj!)
+    }
 }

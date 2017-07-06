@@ -293,9 +293,8 @@ public extension String {
         return String(format: hash as String)
     }
     
-    func convertStringToDate() {
-        let dateString = "2017-07-06 15:37:24"
-        
+    func convertStringToDate(dateString:String) -> String {
+
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         dateFormatter.locale = Locale.init(identifier: "en_US_POSIX")
@@ -303,11 +302,21 @@ public extension String {
         let dateObj = dateFormatter.date(from: dateString)
         let date = Date()
         let calendar = Calendar.current
+        // current date
+        let currentYear = calendar.component(.year, from: date)
+        let currentMonth = calendar.component(.month, from: date)
+        let currentDay = calendar.component(.day, from: date)
+        let currentHour = calendar.component(.hour, from: date)
+        let currentMinute = calendar.component(.minute, from: date)
+        let currentSecond = calendar.component(.second, from: date)
+        // last date
+        let Lastyear1 = calendar.component(.hour, from: dateObj!)
+        let LastMonth = calendar.component(.hour, from: dateObj!)
+        let LastDay = calendar.component(.hour, from: dateObj!)
+        let LastHour = calendar.component(.hour, from: dateObj!)
+        let LastMinute = calendar.component(.minute, from: dateObj!)
+        let LastSecond = calendar.component(.second, from: dateObj!)
         
-        let year = calendar.component(.year, from: date)
-        let month = calendar.component(.month, from: date)
-        let day = calendar.component(.day, from: date)
-        
-        let year1 = calendar.component(.hour, from: dateObj!)
+        return ""
     }
 }

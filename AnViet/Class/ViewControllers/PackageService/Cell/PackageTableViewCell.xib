@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="51" id="KGk-i7-Jjw" customClass="PackageTableViewCell" customModule="AnViet" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="323" height="51"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="323" height="51"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zTV-Ov-oMX">
+                        <rect key="frame" x="64" y="0.0" width="259" height="48"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4 - DC" translatesAutoresizingMaskIntoConstraints="NO" id="VjE-ns-b64">
+                        <rect key="frame" x="8" y="0.0" width="48" height="48"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="VjE-ns-b64" secondAttribute="height" multiplier="1:1" id="PeM-Y7-CCy"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" red="1" green="0.41176470590000003" blue="0.043137254899999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="VjE-ns-b64" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="2Rx-qY-ATm"/>
+                    <constraint firstAttribute="trailing" secondItem="zTV-Ov-oMX" secondAttribute="trailing" id="Aha-jW-vfJ"/>
+                    <constraint firstItem="VjE-ns-b64" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Ccw-0y-BDH"/>
+                    <constraint firstItem="VjE-ns-b64" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Ixd-Se-tPP"/>
+                    <constraint firstItem="zTV-Ov-oMX" firstAttribute="leading" secondItem="VjE-ns-b64" secondAttribute="trailing" constant="8" id="K6s-Ir-Pgs"/>
+                    <constraint firstItem="zTV-Ov-oMX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="NBX-sW-WfQ"/>
+                    <constraint firstItem="zTV-Ov-oMX" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="8/10" id="XqQ-Fx-PbM"/>
+                    <constraint firstAttribute="bottom" secondItem="zTV-Ov-oMX" secondAttribute="bottom" id="cbe-df-UeI"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="26.5" y="55.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="4 - DC" width="48" height="48"/>
+    </resources>
+</document>

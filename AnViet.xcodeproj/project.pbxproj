@@ -21,6 +21,10 @@
 		4B3FA9651F03AE6F004D0ED9 /* UserInforViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3FA9631F03AE6F004D0ED9 /* UserInforViewController.swift */; };
 		4B3FA9661F03AE6F004D0ED9 /* UserInforViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B3FA9641F03AE6F004D0ED9 /* UserInforViewController.xib */; };
 		4B3FA9681F03B49E004D0ED9 /* AVUserInforSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3FA9671F03B49E004D0ED9 /* AVUserInforSetting.swift */; };
+		4BEF9D161F0E2DB70030CD35 /* PacKageServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEF9D141F0E2DB70030CD35 /* PacKageServiceViewController.swift */; };
+		4BEF9D171F0E2DB70030CD35 /* PacKageServiceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BEF9D151F0E2DB70030CD35 /* PacKageServiceViewController.xib */; };
+		4BEF9D1B1F0E2E1C0030CD35 /* PackageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEF9D191F0E2E1C0030CD35 /* PackageTableViewCell.swift */; };
+		4BEF9D1C1F0E2E1C0030CD35 /* PackageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BEF9D1A1F0E2E1C0030CD35 /* PackageTableViewCell.xib */; };
 		5306F9EC1EECDD60000C9EEF /* AVNewsPostRoutuer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5306F9EB1EECDD60000C9EEF /* AVNewsPostRoutuer.swift */; };
 		5312612A1EE9D5170014D87B /* AVNewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531261281EE9D5170014D87B /* AVNewsTableViewCell.swift */; };
 		5312612B1EE9D5170014D87B /* AVNewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 531261291EE9D5170014D87B /* AVNewsTableViewCell.xib */; };
@@ -196,6 +200,10 @@
 		4B3FA9641F03AE6F004D0ED9 /* UserInforViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserInforViewController.xib; sourceTree = "<group>"; };
 		4B3FA9671F03B49E004D0ED9 /* AVUserInforSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVUserInforSetting.swift; sourceTree = "<group>"; };
 		4BBED44F1F0A0028002D23FC /* IQKeyboardManagerSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IQKeyboardManagerSwift.framework; path = "../Library/Developer/Xcode/DerivedData/AnViet-gjyarszxphakrzdqxigfgbhnfbth/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework"; sourceTree = "<group>"; };
+		4BEF9D141F0E2DB70030CD35 /* PacKageServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PacKageServiceViewController.swift; sourceTree = "<group>"; };
+		4BEF9D151F0E2DB70030CD35 /* PacKageServiceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PacKageServiceViewController.xib; sourceTree = "<group>"; };
+		4BEF9D191F0E2E1C0030CD35 /* PackageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PackageTableViewCell.swift; sourceTree = "<group>"; };
+		4BEF9D1A1F0E2E1C0030CD35 /* PackageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PackageTableViewCell.xib; sourceTree = "<group>"; };
 		5306F9EB1EECDD60000C9EEF /* AVNewsPostRoutuer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVNewsPostRoutuer.swift; sourceTree = "<group>"; };
 		531261281EE9D5170014D87B /* AVNewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVNewsTableViewCell.swift; sourceTree = "<group>"; };
 		531261291EE9D5170014D87B /* AVNewsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AVNewsTableViewCell.xib; sourceTree = "<group>"; };
@@ -438,6 +446,25 @@
 				4B3FA9641F03AE6F004D0ED9 /* UserInforViewController.xib */,
 			);
 			path = UserInforViewController;
+			sourceTree = "<group>";
+		};
+		4BEF9D131F0E2D9C0030CD35 /* PackageService */ = {
+			isa = PBXGroup;
+			children = (
+				4BEF9D181F0E2DC50030CD35 /* Cell */,
+				4BEF9D141F0E2DB70030CD35 /* PacKageServiceViewController.swift */,
+				4BEF9D151F0E2DB70030CD35 /* PacKageServiceViewController.xib */,
+			);
+			path = PackageService;
+			sourceTree = "<group>";
+		};
+		4BEF9D181F0E2DC50030CD35 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4BEF9D191F0E2E1C0030CD35 /* PackageTableViewCell.swift */,
+				4BEF9D1A1F0E2E1C0030CD35 /* PackageTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		531261271EE9D4FA0014D87B /* Cell */ = {
@@ -683,6 +710,7 @@
 		535BE7ED1ED5FA3E00363A7B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				4BEF9D131F0E2D9C0030CD35 /* PackageService */,
 				538A21C31F07556D00C1BA1B /* ReviewUSViewController */,
 				538A21BE1F0754FE00C1BA1B /* AboutUSViewController */,
 				538A21B91F0746E300C1BA1B /* ChangePasswordViewController */,
@@ -1095,6 +1123,7 @@
 				533DF8181F040ADB0005EE89 /* MainSettingViewController.xib in Resources */,
 				538A21A81F06BCFB00C1BA1B /* InforTableViewCell.xib in Resources */,
 				5312612B1EE9D5170014D87B /* AVNewsTableViewCell.xib in Resources */,
+				4BEF9D171F0E2DB70030CD35 /* PacKageServiceViewController.xib in Resources */,
 				538A21C81F07558500C1BA1B /* AVReviewUSViewController.xib in Resources */,
 				538A21AD1F06C93100C1BA1B /* configTableViewCell.xib in Resources */,
 				5312612F1EE9DAFC0014D87B /* AVHeaderNewsTableViewCell.xib in Resources */,
@@ -1116,6 +1145,7 @@
 				4B0BD3EE1F0646680040CCA5 /* TimeLineNoImageTableViewCell.xib in Resources */,
 				533DF8201F040B750005EE89 /* InforComputerViewController.xib in Resources */,
 				533749CE1EDABF9B00312AA5 /* AVMainViewController.xib in Resources */,
+				4BEF9D1C1F0E2E1C0030CD35 /* PackageTableViewCell.xib in Resources */,
 				53BA65121EDDC2670027A463 /* AVNewFeedOneImageTableViewCell.xib in Resources */,
 				53BA65281EDDCA850027A463 /* AVNewFeedThreeImageTableViewCell.xib in Resources */,
 				535BE7B91ED5F92200363A7B /* Main.storyboard in Resources */,
@@ -1219,6 +1249,7 @@
 				538A21BC1F074DA300C1BA1B /* AVChangePasswordViewController.swift in Sources */,
 				533749DB1EDAC59D00312AA5 /* CAPSPageMenu+UIScrollViewDelegate.swift in Sources */,
 				53B20A551ED6075500332200 /* AVBaseCollectionViewCell.swift in Sources */,
+				4BEF9D1B1F0E2E1C0030CD35 /* PackageTableViewCell.swift in Sources */,
 				53B20A2D1ED6011900332200 /* Float.swift in Sources */,
 				53B20A311ED6011900332200 /* NSNotificationCenter.swift in Sources */,
 				53BA65331EDDCB7D0027A463 /* AVNewFeedFiveImageTableViewCell.swift in Sources */,
@@ -1269,6 +1300,7 @@
 				53C10E6D1EDDFE2800C24B7C /* UserInfor.swift in Sources */,
 				538A21C71F07558500C1BA1B /* AVReviewUSViewController.swift in Sources */,
 				533C7E961EF1A5810009AE18 /* TPKeyboardAvoidingTableView.m in Sources */,
+				4BEF9D161F0E2DB70030CD35 /* PacKageServiceViewController.swift in Sources */,
 				533749D91EDAC59D00312AA5 /* CAPSPageMenu+UIConfiguration.swift in Sources */,
 				53661BA21EDA63E400BD01E4 /* AVPersonalViewController.swift in Sources */,
 				53B20A421ED6011900332200 /* UITableView.swift in Sources */,

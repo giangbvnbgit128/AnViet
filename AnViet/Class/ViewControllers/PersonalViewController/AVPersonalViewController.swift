@@ -79,6 +79,8 @@ extension AVPersonalViewController: UITableViewDataSource {
             break
 
         case 2: // gói dich vụ
+            let pacKageServiceVC = PacKageServiceViewController()
+            AVMainViewController.ShareInstance.navigationController?.pushViewController(pacKageServiceVC, animated: true)
             break
         case 3:
             let changePassVC = AVChangePasswordViewController()

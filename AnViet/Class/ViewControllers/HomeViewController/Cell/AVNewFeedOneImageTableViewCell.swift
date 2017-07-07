@@ -26,6 +26,7 @@ class AVNewFeedOneImageTableViewCell: AVBaseNewFeedTableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.lblDetail.textColor = UIColor.gray
         let tapRecognizer = UITapGestureRecognizer( target: self, action: #selector(self.tapImg1))
         self.img1.addGestureRecognizer(tapRecognizer)
         

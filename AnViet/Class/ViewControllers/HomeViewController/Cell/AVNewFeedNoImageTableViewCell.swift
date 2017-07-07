@@ -21,6 +21,7 @@ class AVNewFeedNoImageTableViewCell: AVBaseNewFeedTableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.lbldetail.textColor = UIColor.gray
     }
 
     override func configCell(data:DataForItem, host:String, vc:UIViewController) {

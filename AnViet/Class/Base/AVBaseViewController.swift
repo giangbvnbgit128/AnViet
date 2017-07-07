@@ -11,8 +11,14 @@ import ZKProgressHUD
 
 class AVBaseViewController: UIViewController{
     class var identifier: String { return String.className(self) }
+    var indicator:UIActivityIndicatorView =  UIActivityIndicatorView()
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.addSubview(indicator)
+        self.view.bringSubview(toFront: indicator)
+        self.indicator.backgroundColor = UIColor.clear
+        self.indicator.frame = CGRect( x: UIScreen.main.bounds.width/2 - 25, y: UIScreen.main.bounds.height/2 - 25 - self.heightStatusBar() - 55, width: 50, height: 50)
+        
     }
     
     func isHiddenNavigationBar(isHidden:Bool) {
@@ -25,13 +31,12 @@ class AVBaseViewController: UIViewController{
         super.viewWillDisappear(animated)
     }
     func showLoading() {
-        ZKProgressHUD.show()
-        ZKProgressHUD.setBackgroundColor(.white)
-        ZKProgressHUD.setForegroundColor(.black)
-        ZKProgressHUD.setAnimationStyle( .circle)
+        self.view.bringSubview(toFront: indicator)
+        self.indicator.startAnimating()
     }
     func stopLoading() {
-        ZKProgressHUD.dismiss()
+        self.view.sendSubview(toBack: indicator)
+        self.indicator.stopAnimating()
     }
     func showAler(message:String,title:String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)

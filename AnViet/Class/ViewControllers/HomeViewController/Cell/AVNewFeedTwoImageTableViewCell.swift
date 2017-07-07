@@ -28,6 +28,7 @@ class AVNewFeedTwoImageTableViewCell: AVBaseNewFeedTableViewCell {
     var supperViewVC:UIViewController?
     override func awakeFromNib() {
         super.awakeFromNib()
+    self.lblDetail.textColor = UIColor.gray
     let tapRecognizer = UITapGestureRecognizer( target: self, action: #selector(self.tapImg1))
         self.img1.addGestureRecognizer(tapRecognizer)
     let tapRecognizer2 = UITapGestureRecognizer( target: self, action: #selector(self.tapImg2))

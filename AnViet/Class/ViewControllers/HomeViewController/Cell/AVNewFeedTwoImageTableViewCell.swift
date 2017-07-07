@@ -59,7 +59,7 @@ class AVNewFeedTwoImageTableViewCell: AVBaseNewFeedTableViewCell {
         self.supperViewVC = vc
         self.images.removeAll()
         self.lblTitle.text = data.post.title
-        self.lblDetail.text = data.post.createdDate
+        self.lblDetail.text = data.post.createdDate.dateFormUp()
         self.lblDescription.text = data.post.content
         self.btnLike.setTitle(data.post.userLike, for: .normal)
         self.imgAvarta.sd_setImage(with: URL(string: host + data.user.avartar), placeholderImage: UIImage(named: "icon_avatar.png"))

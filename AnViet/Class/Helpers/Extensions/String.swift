@@ -293,13 +293,13 @@ public extension String {
         return String(format: hash as String)
     }
     
-    func convertStringToDate(dateString:String) -> String {
-
+    func dateFormUp() -> String {
+        //dateString:String
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         dateFormatter.locale = Locale.init(identifier: "en_US_POSIX")
         
-        let dateObj = dateFormatter.date(from: dateString)
+        let dateObj = dateFormatter.date(from: self)
         let date = Date()
         let calendar = Calendar.current
         // current date
@@ -310,13 +310,41 @@ public extension String {
         let currentMinute = calendar.component(.minute, from: date)
         let currentSecond = calendar.component(.second, from: date)
         // last date
-        let Lastyear1 = calendar.component(.hour, from: dateObj!)
-        let LastMonth = calendar.component(.hour, from: dateObj!)
-        let LastDay = calendar.component(.hour, from: dateObj!)
+        if dateObj == nil {
+            return "00 00 00 00:00:00"
+        }
+        let Lastyear1 = calendar.component(.year, from: dateObj!)
+        let LastMonth = calendar.component(.month, from: dateObj!)
+        let LastDay = calendar.component(.day, from: dateObj!)
         let LastHour = calendar.component(.hour, from: dateObj!)
         let LastMinute = calendar.component(.minute, from: dateObj!)
         let LastSecond = calendar.component(.second, from: dateObj!)
+        // progress
         
-        return ""
+        if (currentYear - Lastyear1) == 0 {
+            if (currentMonth - LastMonth) == 0 {
+                if (currentDay - LastDay) == 0 {
+                    if (currentHour - LastHour) == 0 {
+                        if (currentMinute - LastMinute) == 0  {
+                            if (currentSecond - LastSecond) == 0  {
+                                return "vừa xong"
+                            } else {
+                                return "\(currentSecond - LastSecond) giây trước"
+                            }
+                        } else {
+                            return "\(currentMinute - LastMinute) phút trước"
+                        }
+                    } else {
+                        return "\(currentHour - LastHour) giờ trước"
+                    }
+                } else {
+                    return "\(currentDay - LastDay) ngày trước"
+                }
+            } else {
+                return "\(currentMonth - LastMonth) tháng trước"
+            }
+        } else {
+            return "\(currentYear - Lastyear1) năm trước"
+        }
     }
 }

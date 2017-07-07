@@ -25,7 +25,7 @@ class AVNewFeedNoImageTableViewCell: AVBaseNewFeedTableViewCell {
 
     override func configCell(data:DataForItem, host:String, vc:UIViewController) {
         self.lblTitle.text = data.post.title
-        self.lbldetail.text = data.post.createdDate
+        self.lbldetail.text = data.post.createdDate.dateFormUp()
         self.lblDescription.text = data.post.content
         self.btnLike.setTitle(data.post.userLike, for: .normal)
         self.imgAvarta.sd_setImage(with: URL(string: host + data.user.avartar), placeholderImage: UIImage(named: "icon_avatar.png"))

@@ -179,7 +179,7 @@ public extension String {
         var regexString = ""
         switch regex {
         case .alphabetCharatersOnly(let from, let to):
-            regexString  = "\\S[A-Za-z \\x{00C0}-\\x{00FF}\\x{1EA0}-\\x{1EFF}]{\(from),\(to)}"
+            regexString = "\\S[A-Za-z'. \\x{00C0}-\\x{00FF}\\x{1EA0}-\\x{1EFF}]{\(from),\(to)}"
         case .numberOnly:
             regexString = "^(?:|0|[1-9]\\d*)(?:\\.\\d*)?$"
         case .email1:
@@ -200,6 +200,29 @@ public extension String {
         return validateWithRegex(regexString)
     }
 
+    func validateNameVI(to:Int,form:Int) ->Bool {
+     // ten khong duc phep chua ky tu so va ky tu dac biet.
+        let arrCharaterSpecial:[Character] = ["!","@","#","$","%","^","&","*","(",")","/","|","}","{","-","+","=","_",":",";","<",">",".",",","?","`","~"]
+        let arrNumber:[Character] = ["0","1","2","3","4","5","6","7","8","9"]
+        if self.characters.count < form || self.characters.count > to {
+            return false
+        }
+        
+        let arrContent = Array(self.characters)
+        for i in 0..<arrContent.count {
+            for j in 0..<arrCharaterSpecial.count {
+                if arrContent[i] == arrCharaterSpecial[j] {
+                    return false
+                }
+            }
+            for n in 0..<arrNumber.count {
+                if arrContent[i] == arrNumber[n] {
+                    return false
+                }
+            }
+        }
+        return true
+    }
     // MARK: - Convert String to Number
     var intValue: Int {
         return (self as NSString).integerValue

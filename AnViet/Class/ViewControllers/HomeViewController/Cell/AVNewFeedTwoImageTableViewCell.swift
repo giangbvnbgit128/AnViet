@@ -64,21 +64,21 @@ class AVNewFeedTwoImageTableViewCell: AVBaseNewFeedTableViewCell {
         self.lblDescription.text = data.post.content
         self.btnLike.setTitle(data.post.userLike, for: .normal)
         self.imgAvarta.sd_setImage(with: URL(string: host + data.user.avartar), placeholderImage: UIImage(named: "icon_avatar.png"))
-        self.img1.sd_setImage(with: URL(string: host + data.post.image[0].urlImage), placeholderImage: UIImage(named: "no_image.png"), options: []) { (someImage, someError, type, urlImage) in
+        self.img1.sd_setImage(with: URL(string: host + data.post.image[0].urlImage), placeholderImage: UIImage(named: "PlaceHolder.png"), options: []) { (someImage, someError, type, urlImage) in
             var photo:SKPhoto?
             if someImage != nil {
                 photo = SKPhoto.photoWithImage(someImage!)
             } else {
-                photo = SKPhoto.photoWithImage(UIImage(named: "no_image.png")!)
+                photo = SKPhoto.photoWithImage(UIImage(named: "PlaceHolder.png")!)
             }
             self.images.append(photo!)
         }
-        self.img2.sd_setImage(with: URL(string: host + data.post.image[1].urlImage), placeholderImage: UIImage(named: "no_image.png"), options: []) { (someImage, someError, type, urlImage) in
+        self.img2.sd_setImage(with: URL(string: host + data.post.image[1].urlImage), placeholderImage: UIImage(named: "PlaceHolder.png"), options: []) { (someImage, someError, type, urlImage) in
             var photo:SKPhoto?
             if someImage != nil {
                 photo = SKPhoto.photoWithImage(someImage!)
             } else {
-                photo = SKPhoto.photoWithImage(UIImage(named: "no_image.png")!)
+                photo = SKPhoto.photoWithImage(UIImage(named: "PlaceHolder.png")!)
             }
             self.images.append(photo!)
         }

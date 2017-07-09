@@ -27,7 +27,7 @@ class AVBaseNewFeedTableViewCell: AVBaseTableViewCell {
         DispatchQueue.global().async {
             let data = try? Data(contentsOf: url!)
             DispatchQueue.main.async {
-                var imageData:UIImage = UIImage(named: "no_image.png")!
+                var imageData:UIImage = UIImage(named: "PlaceHolder.png")!
                 if data != nil && UIImage(data: data!) != nil {
                  imageData = UIImage(data: data!)!
                 }

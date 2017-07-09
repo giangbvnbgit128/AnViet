@@ -17,6 +17,6 @@ class TimeLineImageCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
     func configCell(url:String) {
-       self.imgCell.sd_setImage(with: URL(string: url), placeholderImage: UIImage( named: "no_image.png"))
+       self.imgCell.sd_setImage(with: URL(string: url), placeholderImage: UIImage( named: "PlaceHolder.png"))
     }
 }

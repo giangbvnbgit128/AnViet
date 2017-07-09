@@ -33,9 +33,8 @@ class UserInforViewController: AVBaseViewController {
     }
     
     func setUpData() {
-        let value:NSObject =  UserDefaults[.userInfor] as! NSObject
-        let newValue = value as? [String : AnyObject]
-        user = Mapper<UserInfor>().map(JSONObject: newValue)!
+        
+        user = AVDatamanager.ShareInstance.UserManager
         
         tfName.text = user.data.name
         tfNumberPhone.text = user.data.phone

@@ -24,6 +24,7 @@ class AVHomeViewController: AVBaseViewController {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
         setUpTable()
+        user = AVDatamanager.ShareInstance.UserManager
         AVMainViewController.ShareInstance.blockReloadData = {() in
             self.getData()
         }
@@ -36,9 +37,6 @@ class AVHomeViewController: AVBaseViewController {
     }
     
     func getData() {
-        let value:NSObject =  UserDefaults[.userInfor] as! NSObject
-        let newValue = value as? [String : AnyObject]
-        user = Mapper<UserInfor>().map(JSONObject: newValue)!
         self.getNewsFeed(userid: user.data.id, token: user.data.token, limit: "10", postid: "0",isloadMore: false)
     }
     

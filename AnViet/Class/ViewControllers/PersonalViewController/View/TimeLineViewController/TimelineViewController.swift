@@ -22,9 +22,7 @@ class TimelineViewController: AVBaseViewController {
         MainSettingViewController.ShareInstance.blockHiddenRightItemNav = {() in
             MainSettingViewController.ShareInstance.navigationItem.rightBarButtonItem = nil
         }
-        let value:NSObject =  UserDefaults[.userInfor] as! NSObject
-        let newValue = value as? [String : AnyObject]
-        user = Mapper<UserInfor>().map(JSONObject: newValue)!
+        user = AVDatamanager.ShareInstance.UserManager
         
         self.tableview.delegate = self
         self.tableview.dataSource = self

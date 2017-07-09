@@ -198,14 +198,9 @@ class AVRegisterAccountAccountViewController: AVBaseViewController {
             switch response.result {
             case .success(let value):
                 let newValue = value as? [String : AnyObject]
-                UserDefaults[.userInfor] = value as! NSObject
                 self.userInfor = Mapper<UserInfor>().map(JSONObject: newValue)!
                 if self.userInfor.error.compare("FALSE") == .orderedSame {
-                    
-                    let value:NSObject =  UserDefaults[.userInfor] as! NSObject
-                    let newValue = value as? [String : AnyObject]
-                    let user = Mapper<UserInfor>().map(JSONObject: newValue)!
-                    
+                    AVDatamanager.ShareInstance.UserManager = self.userInfor
                     let tabbarVC = AVMainViewController()
                     let anvVC = AVBaseNavigationController(rootViewController: tabbarVC)
                     appDelegate.window?.rootViewController = anvVC

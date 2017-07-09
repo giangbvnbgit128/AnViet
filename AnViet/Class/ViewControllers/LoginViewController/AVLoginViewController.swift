@@ -95,8 +95,8 @@ class AVLoginViewController: AVBaseViewController {
             case .success(let value):
                 let newValue = value as? [String : AnyObject]
                 self.userInfor = Mapper<UserInfor>().map(JSONObject: newValue)!
-                UserDefaults[.userInfor] = value as! NSObject
                 if self.userInfor.error.compare("FALSE") == .orderedSame {
+                    AVDatamanager.ShareInstance.UserManager = self.userInfor
                     let tabbarVC = AVMainViewController()
                     let anvVC = AVBaseNavigationController(rootViewController: tabbarVC)
                     appDelegate.window?.rootViewController = anvVC

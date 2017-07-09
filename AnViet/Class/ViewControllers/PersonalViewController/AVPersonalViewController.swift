@@ -23,9 +23,7 @@ class AVPersonalViewController: AVBaseViewController {
         self.tablView.dataSource = self
         self.tablView.registerCellNib(AVProrsonalTableViewCell.self)
         
-        let value:NSObject =  UserDefaults[.userInfor] as! NSObject
-        let newValue = value as? [String : AnyObject]
-        user = Mapper<UserInfor>().map(JSONObject: newValue)!
+        user = AVDatamanager.ShareInstance.UserManager
         
         arrTitle.append(user.data.name)
         arrTitle.append(user.data.computername)

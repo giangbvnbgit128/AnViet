@@ -34,6 +34,7 @@
 		531261341EE9E2B60014D87B /* AVServiceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 531261321EE9E2B60014D87B /* AVServiceCollectionViewCell.xib */; };
 		531261381EE9E64A0014D87B /* AVProrsonalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531261361EE9E64A0014D87B /* AVProrsonalTableViewCell.swift */; };
 		531261391EE9E64A0014D87B /* AVProrsonalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 531261371EE9E64A0014D87B /* AVProrsonalTableViewCell.xib */; };
+		53175B881F121A9F0099A093 /* AVDatamanager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53175B871F121A9F0099A093 /* AVDatamanager.swift */; };
 		5320B49B1F0164930059FAAE /* DKImagePickerController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5320B49A1F0164930059FAAE /* DKImagePickerController.framework */; };
 		5320B49D1F01779C0059FAAE /* NewsUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5320B49C1F01779C0059FAAE /* NewsUpload.swift */; };
 		5320B49F1F0181290059FAAE /* AVPostNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5320B49E1F0181290059FAAE /* AVPostNews.swift */; };
@@ -213,6 +214,7 @@
 		531261321EE9E2B60014D87B /* AVServiceCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AVServiceCollectionViewCell.xib; sourceTree = "<group>"; };
 		531261361EE9E64A0014D87B /* AVProrsonalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVProrsonalTableViewCell.swift; sourceTree = "<group>"; };
 		531261371EE9E64A0014D87B /* AVProrsonalTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AVProrsonalTableViewCell.xib; sourceTree = "<group>"; };
+		53175B871F121A9F0099A093 /* AVDatamanager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVDatamanager.swift; sourceTree = "<group>"; };
 		5320B4981F0148D90059FAAE /* DKImagePickerController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DKImagePickerController.framework; path = "Pods/../build/Release-iphoneos/DKImagePickerController/DKImagePickerController.framework"; sourceTree = "<group>"; };
 		5320B49A1F0164930059FAAE /* DKImagePickerController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DKImagePickerController.framework; path = "../Library/Developer/Xcode/DerivedData/AnViet-aohvdzfrryibuncznkwiirpdgrzu/Build/Products/Debug-iphonesimulator/DKImagePickerController/DKImagePickerController.framework"; sourceTree = "<group>"; };
 		5320B49C1F01779C0059FAAE /* NewsUpload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsUpload.swift; sourceTree = "<group>"; };
@@ -501,6 +503,7 @@
 			children = (
 				53BA653D1EDDE50E0027A463 /* EncodeMD5 */,
 				533749D01EDAC59D00312AA5 /* PageMenu */,
+				53175B871F121A9F0099A093 /* AVDatamanager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1238,6 +1241,7 @@
 				535BE7EF1ED5FA6500363A7B /* AppDelegate.swift in Sources */,
 				536C055E1EF81A0B0010AF77 /* ImageUpLoad.swift in Sources */,
 				533749D81EDAC59D00312AA5 /* CAPSPageMenu+Options.swift in Sources */,
+				53175B881F121A9F0099A093 /* AVDatamanager.swift in Sources */,
 				53B20A291ED6011900332200 /* Array.swift in Sources */,
 				535BE7B61ED5F92200363A7B /* ViewController.swift in Sources */,
 				53B20A341ED6011900332200 /* NSUserDefaults.swift in Sources */,

@@ -136,9 +136,7 @@ class PostViewController: AVBaseViewController {
     
     func postNews(image:String,content:String,complete: (()-> Void)) {
         self.showLoading()
-        let value:NSObject =  UserDefaults[.userInfor] as! NSObject
-        let newValue = value as? [String : AnyObject]
-        user = Mapper<UserInfor>().map(JSONObject: newValue)!
+        user = AVDatamanager.ShareInstance.UserManager
         
         Alamofire.request(AVNewsPostRouter( endpoint: .PostNews(userId: user.data.id, token: user.data.token, image: image.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!, content: content.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!))).responseJSON { (response) in
             self.stopLoading()

@@ -19,10 +19,7 @@ class AVChangePasswordViewController: AVBaseViewController {
         super.viewDidLoad()
         
         self.navigationController?.isNavigationBarHidden = false
-        
-        let value:NSObject =  UserDefaults[.userInfor] as! NSObject
-        let newValue = value as? [String : AnyObject]
-        user = Mapper<UserInfor>().map(JSONObject: newValue)!
+        user = AVDatamanager.ShareInstance.UserManager
     }
 
     override func didReceiveMemoryWarning() {

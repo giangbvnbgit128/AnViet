@@ -53,7 +53,7 @@ class AVHomeViewController: AVBaseViewController {
         self.tableView.registerCellNib(AVNewFeedFiveImageTableViewCell.self)
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 200
-        
+        self.tableView.separatorStyle = .none
     }
     
     override func didReceiveMemoryWarning() {

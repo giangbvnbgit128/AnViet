@@ -25,7 +25,7 @@ class AVNewFeedNoImageTableViewCell: AVBaseNewFeedTableViewCell {
     }
 
     override func configCell(data:DataForItem, host:String, vc:UIViewController) {
-        self.lblTitle.text = data.post.title
+        self.lblTitle.text = data.user.username
         self.lbldetail.text = data.post.createdDate.dateFormUp()
         self.lblDescription.text = data.post.content
         self.btnLike.setTitle(data.post.userLike, for: .normal)

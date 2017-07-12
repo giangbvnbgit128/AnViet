@@ -82,7 +82,7 @@ class AVNewFeedFourImageTableViewCell: AVBaseNewFeedTableViewCell {
     override func configCell(data: DataForItem, host: String,vc:UIViewController) {
         self.supperViewVC = vc
          self.images.removeAll()
-        self.lblTitle.text = data.post.title
+        self.lblTitle.text = data.user.username
         self.lblDetail.text = data.post.createdDate.dateFormUp()
         self.lblDescription.text = data.post.content
         self.btnLike.setTitle(data.post.userLike, for: .normal)
